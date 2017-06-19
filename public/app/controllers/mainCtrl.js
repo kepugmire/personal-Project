@@ -1,8 +1,9 @@
 angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
-
-
     $scope.test = mainSvc.test
+
+
+
 
 
 
