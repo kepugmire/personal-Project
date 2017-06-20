@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Project</title>
+    <link rel="stylesheet" href="/dist/all.css">
 </head>
 
 <body ng-controller="mainCtrl">
 
-{{test}}
+    <div class="main-container">
+
+
+        <header><img src="./app/assets/img/logo.jpg" style="height: 100%"></header>
+
+        <view-wrapper>
 
 
 
+            <ui-view></ui-view>
 
 
 
+        </view-wrapper>
 
+        <footer>
+            <div>welcome</div>
+        </footer>
 
-
-
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>

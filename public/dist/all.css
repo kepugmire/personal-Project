@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+body {
+  background-color: white;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif; }
+
+.main-container {
+  height: 100vh;
+  width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+header {
+  height: 290px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+view-wrapper {
+  min-height: 20%; }
+
+footer {
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer div {
+    height: 50px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 6px solid #988676;
+    border-bottom: 6px solid #988676;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: #988676; }
+
+.home {
+  width: 620px;
+  height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around; }
+  .home div {
+    height: 180px;
+    width: 180px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  -webkit-text-decoration-style: none;
+  text-decoration-style: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit; }
