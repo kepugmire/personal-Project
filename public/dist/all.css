@@ -121,7 +121,7 @@ a:link, a:visited, a:hover, a:active {
 
 .contact {
   width: 620px;
-  height: 100vh;
+  height: 135vh;
   font-family: 'Quicksand', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +154,17 @@ a:link, a:visited, a:hover, a:active {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     color: black; }
+  .contact main-wrapper {
+    height: 120vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .contact main-wrapper div {
     width: 475px;
     display: -webkit-box;
@@ -166,9 +177,9 @@ a:link, a:visited, a:hover, a:active {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
   .contact input {
     height: 30px;
     font-size: 15px;
@@ -201,106 +212,64 @@ a:link, a:visited, a:hover, a:active {
     color: gray;
     font-size: 10px;
     margin: 3px; }
-  .contact .name {
+  .contact .name .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .name .input-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%; }
+    .contact .name .input-wrapper div {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      width: 100%; }
-      .contact .name .input-wrapper div {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start; }
-        .contact .name .input-wrapper div input {
-          width: 95%; }
-  .contact .email {
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      .contact .name .input-wrapper div input {
+        width: 95%; }
+  .contact .email input {
+    width: 100%; }
+  .contact .subject input {
+    width: 100%; }
+  .contact .date .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .email input {
-      width: 100%; }
-  .contact .subject {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .subject input {
-      width: 100%; }
-  .contact .date {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .date .input-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 50%; }
+    .contact .date .input-wrapper div {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      width: 50%; }
-      .contact .date .input-wrapper div {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start; }
-        .contact .date .input-wrapper div input {
-          width: 85%; }
-  .contact .message {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .message input {
-      width: 100%; }
-  .contact .referral {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    .contact .referral input {
-      width: 100%; }
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      .contact .date .input-wrapper div input {
+        width: 85%; }
+  .contact .message input {
+    width: 100%; }
+  .contact .referral input {
+    width: 100%; }
   .contact button {
     height: 36px;
     width: 120px;

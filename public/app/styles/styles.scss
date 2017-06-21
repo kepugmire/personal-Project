@@ -90,7 +90,7 @@ a:link, a:visited, a:hover, a:active {
 
 .contact {
     width: 620px;
-    height: 100vh;
+    height: 135vh;
     font-family: 'Quicksand', sans-serif;
     display: flex;
         flex-direction: column;
@@ -111,12 +111,19 @@ a:link, a:visited, a:hover, a:active {
             color: black;
         }
 
+    main-wrapper {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }    
+
     main-wrapper div {
         width: 475px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     input {
@@ -160,8 +167,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .name {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         .input-wrapper {
             display: flex;
@@ -182,8 +189,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .email {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -191,8 +198,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .subject {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -200,8 +207,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .date {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         .input-wrapper {
             display: flex;
@@ -222,8 +229,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .message {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -231,8 +238,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .referral {
-        display: flex;
-        align-items: flex-start;
+        // display: flex;
+        // align-items: flex-start;
 
         input {
             width: 100%;
