@@ -4,13 +4,13 @@
 body {
     background-color: white;
     background-size: cover;
+    font-family: 'Quicksand', sans-serif;
     display: flex;
         justify-content: center;
-    font-family: 'Quicksand', sans-serif;
 }
 
 .main-container {
-    height: 100vh;
+    height: 100%;
     width: 960px;
     display: flex;
         flex-direction: column;
@@ -27,7 +27,7 @@ header {
 }
 
 view-wrapper {
-    min-height: 20%;
+    min-height: 10%;
 }
 
 footer {
@@ -51,7 +51,7 @@ footer {
         }
 }
 
-// VIEWS //
+// HOME VIEW //
 
 .home {
     width: 620px;
@@ -59,8 +59,7 @@ footer {
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: stretch;
+        justify-content: space-around;
         align-content: space-around;
 
     div {
@@ -71,13 +70,13 @@ footer {
         background-color: black;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
+        font-weight: bolder;
         color: white;
         display: flex;
             align-items: center;
             justify-content: center;
     }
 }
-
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     text-decoration-line: none;
@@ -86,6 +85,186 @@ a:link, a:visited, a:hover, a:active {
     cursor: pointer;
     font-family: inherit;
 }
+
+// CONTACT VIEW //
+
+.contact {
+    width: 620px;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    header {
+            min-height: 51px;
+            max-height: 51px;
+            width: 407px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            border-top: 6px solid black;
+            border-bottom: 6px solid black;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 25px;
+            color: black;
+        }
+
+    main-wrapper div {
+        width: 475px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input {
+        height: 30px;
+        font-size: 15px;
+        border: 2px solid lightgray;
+        border-radius: 4px;
+    }
+
+    input:focus {
+        outline: 2px solid gray;
+    }
+
+    .textarea {
+        height: 30px;
+        font-size: 15px;
+        border: 2px solid lightgray;
+        border-radius: 4px;
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 130px;
+        max-height: 300px;
+    }
+
+    .textarea:focus {
+        outline: 2px solid gray;
+    }
+
+    h3 {
+        color: black;
+        margin-top: 7px;
+        margin-bottom: 1px;
+    }
+    
+    p {
+        color: gray;
+        font-size: 10px;
+        margin: 3px;
+    }
+
+    .name {
+        display: flex;
+        align-items: flex-start;
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                input {
+                     width: 95%;
+                }
+            }
+        }
+    }
+
+    .email {
+        display: flex;
+        align-items: flex-start;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .subject {
+        display: flex;
+        align-items: flex-start;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .date {
+        display: flex;
+        align-items: flex-start;
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                input {
+                     width: 85%;
+                }
+            }
+        }
+    }
+
+    .message {
+        display: flex;
+        align-items: flex-start;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .referral {
+        display: flex;
+        align-items: flex-start;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    button {
+        height: 36px;
+        width: 120px;
+        margin: 15px 0px;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+    }
+
+    div:last-child {
+        color: gray;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
