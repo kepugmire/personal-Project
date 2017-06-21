@@ -28,7 +28,9 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
     });
 });
 "use strict";
-"use strict";
+'use strict';
+
+angular.module('cakeApp').controller('flavorsCtrl', function ($scope, mainSvc) {});
 'use strict';
 
 angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
