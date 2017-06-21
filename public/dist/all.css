@@ -146,11 +146,11 @@ a:link, a:visited, a:hover, a:active {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    border-top: 3px solid #988676;
-    border-bottom: 3px solid #988676;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
-    color: #988676; }
+    color: black; }
   .contact main-wrapper {
     height: 120vh;
     display: -webkit-box;
@@ -270,7 +270,7 @@ a:link, a:visited, a:hover, a:active {
   .contact button {
     height: 36px;
     width: 120px;
-    margin: 15px 0px;
+    margin-bottom: 15px;
     background-color: black;
     color: white;
     font-weight: bolder; }

@@ -94,17 +94,17 @@ a:link, a:visited, a:hover, a:active {
         align-items: center;
 
     header {
-            min-height: 51px;
-            max-height: 51px;
-            width: 407px;
-            display: flex;
-                align-items: center;
-                justify-content: center;
-            border-top: 3px solid #988676;
-            border-bottom: 3px solid #988676;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 25px;
-            color: #988676;
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        color: black;
         }
 
     main-wrapper {
@@ -163,8 +163,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .name {
-        // display: flex;
-        // align-items: flex-start;
 
         .input-wrapper {
             display: flex;
@@ -185,8 +183,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .email {
-        // display: flex;
-        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -194,8 +190,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .subject {
-        // display: flex;
-        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -203,8 +197,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .date {
-        // display: flex;
-        // align-items: flex-start;
 
         .input-wrapper {
             display: flex;
@@ -245,7 +237,7 @@ a:link, a:visited, a:hover, a:active {
     button {
         height: 36px;
         width: 120px;
-        margin: 15px 0px;
+        margin-bottom: 15px;
         background-color: black;
         color: white;
         font-weight: bolder;
