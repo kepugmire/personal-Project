@@ -46,13 +46,17 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  footer div {
+  footer .welcome {
     height: 50px;
     width: 450px;
     display: -webkit-box;
@@ -69,10 +73,29 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     color: #988676; }
+  footer div {
+    height: 70px;
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  footer .fa-facebook {
+    color: white;
+    text-shadow: 0px 0px 30px gray;
+    background: black; }
+  footer .fa-instagram {
+    color: white;
+    text-shadow: 0px 0px 30px gray;
+    background: black; }
 
 .home {
-  width: 620px;
-  height: 420px;
+  width: 590px;
+  height: 390px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +141,7 @@ a:link, a:visited, a:hover, a:active {
 
 .contact {
   width: 620px;
-  height: 135vh;
+  height: 100%;
   font-family: 'Quicksand', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,7 +175,7 @@ a:link, a:visited, a:hover, a:active {
     font-size: 25px;
     color: black; }
   .contact main-wrapper {
-    height: 120vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -340,3 +363,66 @@ a:link, a:visited, a:hover, a:active {
     padding-top: 20px;
     text-align: center;
     border-top: 3px solid #988676; }
+
+.rentals {
+  width: 620px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .rentals header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .rentals main-wrapper {
+    width: 590px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .rentals main-wrapper div {
+      height: 180px;
+      width: 180px;
+      margin-top: 15px;
+      cursor: pointer;
+      text-align: center; }
+      .rentals main-wrapper div img {
+        height: 180px;
+        width: 180px; }

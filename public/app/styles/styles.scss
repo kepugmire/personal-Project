@@ -30,10 +30,11 @@ footer {
     height: 200px;
     width: 100%;
     display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        div {
+        .welcome {
             height: 50px;
             width: 450px;
             display: flex;
@@ -45,13 +46,32 @@ footer {
             font-size: 25px;
             color: #988676;
         }
+
+        div {
+            height: 70px;
+            width: 200px;
+            display: flex;
+                justify-content: space-around;
+                align-items: center;
+        }
+
+        .fa-facebook {
+        color: white;
+        text-shadow: 0px 0px 30px gray;
+        background: black;
+    }
+        .fa-instagram {
+        color: white;
+        text-shadow: 0px 0px 30px gray;
+        background: black;
+    }
 }
 
 // HOME VIEW //
 
 .home {
-    width: 620px;
-    height: 420px;
+    width: 590px;
+    height: 390px;
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -86,7 +106,7 @@ a:link, a:visited, a:hover, a:active {
 
 .contact {
     width: 620px;
-    height: 135vh;
+    height: 100%;
     font-family: 'Quicksand', sans-serif;
     display: flex;
         flex-direction: column;
@@ -108,7 +128,7 @@ a:link, a:visited, a:hover, a:active {
         }
 
     main-wrapper {
-        height: 120vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -217,8 +237,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .message {
-        // display: flex;
-        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -226,8 +244,6 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .referral {
-        // display: flex;
-        // align-items: flex-start;
 
         input {
             width: 100%;
@@ -306,7 +322,56 @@ a:link, a:visited, a:hover, a:active {
 }
 
 
+// RENTALS VIEW //
 
+.rentals {
+    width: 620px;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #988676;
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+
+    header {
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        }
+
+    main-wrapper {
+        width: 590px;
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            align-items: center;
+        div {
+            height: 180px;
+            width: 180px;
+            margin-top: 15px;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                height: 180px;
+                width: 180px;
+            }
+        }
+    }
+
+}
 
 
 
