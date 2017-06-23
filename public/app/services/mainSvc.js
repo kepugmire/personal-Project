@@ -1,8 +1,17 @@
-angular.module('cakeApp').service('mainSvc', function($http){
+angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
     this.test = "Svc is working"
 
 
+
+    this.login = function (user) {
+        $http.post("/auth/local", user).then(response => {
+            $state.go('home')
+            return response.data
+        }).catch(err => {
+            alert(err)
+        })
+    };
 
 
 

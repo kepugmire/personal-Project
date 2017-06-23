@@ -10,9 +10,12 @@ a:link, a:visited, a:hover, a:active {
   font-family: inherit; }
 
 body {
+  min-height: 100vh;
   background-color: white;
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,14 +97,14 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  footer .fa-facebook {
-    color: white;
-    text-shadow: 0px 0px 30px gray;
-    background: black; }
   footer .fa-instagram {
     color: white;
     text-shadow: 0px 0px 30px gray;
-    background: black; }
+    background: gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 40px; }
 
 .home {
   width: 590px;
@@ -496,6 +499,7 @@ footer {
       font-size: 30px;
       font-weight: bolder;
       color: gray;
+      text-shadow: 0px 0px 5px white;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -570,8 +574,7 @@ footer {
       text-align: center; }
       .cakes main-wrapper div img {
         height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover; }
+        width: 100%; }
 
 .desserts {
   width: 620px;
@@ -634,8 +637,7 @@ footer {
       text-align: center; }
       .desserts main-wrapper div img {
         height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover; }
+        width: 100%; }
 
 .celebration {
   width: 620px;
@@ -697,5 +699,48 @@ footer {
       cursor: pointer;
       text-align: center; }
       .celebration main-wrapper div img {
-        height: 180px;
-        width: 180px; }
+        height: 100%;
+        width: 100%; }
+
+.pricing {
+  width: 620px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .pricing header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .pricing main-wrapper {
+    height: 100%;
+    min-height: 200px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }

@@ -2,7 +2,8 @@ angular.module('cakeApp').controller('dessertsCtrl', function ($scope, mainSvc) 
 
 
     $scope.desserts = [
-        "../app/assets/img/desserts/des1.jpg", "../app/assets/img/desserts/des2.jpg", "../app/assets/img/desserts/des3.jpg", "../app/assets/img/desserts/des4.jpg", "../app/assets/img/desserts/des5.jpg", "../app/assets/img/desserts/des6.jpg", "../app/assets/img/desserts/des7.jpg", "../app/assets/img/desserts/des8.jpg", 
+        "../app/assets/img/desserts/1t.jpg", "../app/assets/img/desserts/2t.jpg", "../app/assets/img/desserts/3t.jpg", "../app/assets/img/desserts/4t.jpg", "../app/assets/img/desserts/5t.jpg", "../app/assets/img/desserts/6t.jpg", "../app/assets/img/desserts/7t.jpg", "../app/assets/img/desserts/8t.jpg", 
+        "../app/assets/img/desserts/9t.jpg"
     ]
 
 
