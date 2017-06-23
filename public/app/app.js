@@ -8,12 +8,6 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
             templateUrl: "./app/views/home.html"
         })
 
-        .state('cakes', {
-            url: '/portfolio',
-            templateUrl: "./app/views/cakes.html",
-            controller: 'cakesCtrl'
-        })
-
         .state('contact', {
             url: '/contact',
             templateUrl: "./app/views/contact.html"
@@ -36,5 +30,27 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
             controller: 'flavorsCtrl'
         })
 
+        .state('portfolio', {
+            url: '/portfolio',
+            templateUrl: "./app/views/portfolio.html",
+        })
+
+        .state('desserts', {
+            url: '/desserts',
+            templateUrl: "./app/views/desserts.html",
+            controller: 'dessertsCtrl'
+        })
+        
+        .state('cakes', {
+            url: '/cakes',
+            templateUrl: "./app/views/cakes.html",
+            controller: 'cakesCtrl'
+        })
+
+        .state('celebration', {
+            url: '/celebration',
+            templateUrl: "./app/views/celebration.html",
+            controller: 'celebrationCtrl'
+        })
 
 })

@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  -webkit-text-decoration-style: none;
+  text-decoration-style: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit; }
+
 body {
   background-color: white;
   background-size: cover;
@@ -95,30 +105,34 @@ footer {
 
 .home {
   width: 590px;
-  height: 390px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-  align-content: space-around; }
+  height: 390px; }
+  .home parabox {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around; }
   .home div {
     height: 180px;
     width: 180px;
     cursor: pointer;
     border-radius: 50%;
-    background-color: black;
     font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     color: white;
+    text-shadow: 0px 0px 10px black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -127,17 +141,10 @@ footer {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
-
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-  -webkit-text-decoration-line: none;
-  text-decoration-line: none;
-  -webkit-text-decoration-style: none;
-  text-decoration-style: none;
-  color: inherit;
-  cursor: pointer;
-  font-family: inherit; }
+    justify-content: center;
+    background: url("../../app/assets/img/paraHome.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
 
 .contact {
   width: 620px;
@@ -169,11 +176,12 @@ a:link, a:visited, a:hover, a:active {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
-    color: black; }
+    color: #988676; }
   .contact main-wrapper {
     height: 100vh;
     display: -webkit-box;
@@ -424,5 +432,270 @@ a:link, a:visited, a:hover, a:active {
       cursor: pointer;
       text-align: center; }
       .rentals main-wrapper div img {
+        height: 180px;
+        width: 180px; }
+
+.portfolio {
+  height: 100%;
+  width: 590px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .portfolio header {
+    height: 50px;
+    width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: #988676;
+    margin-bottom: 70px; }
+  .portfolio .port-view {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .portfolio .port-view parabox {
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .portfolio .port-view div {
+      height: 180px;
+      width: 180px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 30px;
+      font-weight: bolder;
+      color: gray;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background: url("../../app/assets/img/paracakes.jpg") no-repeat;
+      background-attachment: fixed;
+      background-size: cover; }
+
+.cakes {
+  width: 620px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .cakes header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .cakes main-wrapper {
+    max-width: 590px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .cakes main-wrapper div {
+      height: 180px;
+      width: 180px;
+      margin-top: 15px;
+      cursor: pointer;
+      text-align: center; }
+      .cakes main-wrapper div img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover; }
+
+.desserts {
+  width: 620px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .desserts header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .desserts main-wrapper {
+    width: 590px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .desserts main-wrapper div {
+      height: 180px;
+      width: 180px;
+      margin-top: 15px;
+      cursor: pointer;
+      text-align: center; }
+      .desserts main-wrapper div img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover; }
+
+.celebration {
+  width: 620px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .celebration header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .celebration main-wrapper {
+    width: 590px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .celebration main-wrapper div {
+      height: 180px;
+      width: 180px;
+      margin-top: 15px;
+      cursor: pointer;
+      text-align: center; }
+      .celebration main-wrapper div img {
         height: 180px;
         width: 180px; }

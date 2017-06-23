@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+}
 
 body {
     background-color: white;
@@ -67,40 +75,43 @@ footer {
     }
 }
 
+
 // HOME VIEW //
 
 .home {
     width: 590px;
     height: 390px;
-    display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
+
+    parabox {
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+    }
 
     div {
         height: 180px;
         width: 180px;
         cursor: pointer;
         border-radius: 50%;
-        background-color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 25px;
+        font-size: 30px;
         font-weight: bolder;
         color: white;
+        text-shadow: 0px 0px 10px black;
         display: flex;
             align-items: center;
             justify-content: center;
+        background: url("../../app/assets/img/paraHome.jpg");
+        background-attachment: fixed;
+        background-size: cover;
     }
 }
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-    text-decoration-line: none;
-    text-decoration-style: none;
-    color: inherit;
-    cursor: pointer;
-    font-family: inherit;
-}
+
 
 // CONTACT VIEW //
 
@@ -120,11 +131,12 @@ a:link, a:visited, a:hover, a:active {
         display: flex;
             align-items: center;
             justify-content: center;
-        border-top: 3px solid black;
-        border-bottom: 3px solid black;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        color: black;
+        color: #988676;
         }
 
     main-wrapper {
@@ -357,6 +369,7 @@ a:link, a:visited, a:hover, a:active {
             justify-content: space-around;
             align-content: space-around;
             align-items: center;
+
         div {
             height: 180px;
             width: 180px;
@@ -370,9 +383,223 @@ a:link, a:visited, a:hover, a:active {
             }
         }
     }
-
 }
 
+
+
+// PORTFOLIO VIEW //
+
+
+.portfolio {
+    height: 100%;
+    width: 590px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    header {
+        height: 50px;
+        width: 450px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        color: #988676;
+        margin-bottom: 70px;
+        }
+
+    .port-view {
+        width: 100%;
+        height: 100%;
+        display: flex;
+            align-items: center;
+
+        parabox {
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+                justify-content: space-around;
+                align-items: center
+        }
+
+        div {
+            height: 180px;
+            width: 180px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            color: gray;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            background: url("../../app/assets/img/paracakes.jpg") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    }
+}
+
+
+// WEDDING CAKES VIEW //
+
+.cakes {
+    width: 620px;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #988676;
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+
+    header {
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        }
+
+    main-wrapper {
+        max-width: 590px;
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            align-items: center;
+
+        div {
+            height: 180px;
+            width: 180px;
+            margin-top: 15px;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+// DESSERTS VIEW //
+
+.desserts {
+    width: 620px;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #988676;
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+
+    header {
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        }
+
+    main-wrapper {
+        width: 590px;
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            align-items: center;
+
+        div {
+            height: 180px;
+            width: 180px;
+            margin-top: 15px;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+// CELEBRATION VIEW //
+
+.celebration {
+    width: 620px;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #988676;
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+
+    header {
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        }
+
+    main-wrapper {
+        width: 590px;
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            align-items: center;
+
+        div {
+            height: 180px;
+            width: 180px;
+            margin-top: 15px;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                height: 180px;
+                width: 180px;
+            }
+        }
+    }
+}
 
 
 
