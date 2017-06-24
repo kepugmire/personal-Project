@@ -376,7 +376,7 @@ footer {
     border-top: 3px solid #988676; }
 
 .rentals {
-  width: 620px;
+  width: 650px;
   height: 100%;
   font-family: 'Quicksand', sans-serif;
   color: #988676;
@@ -415,7 +415,7 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px; }
   .rentals main-wrapper {
-    width: 590px;
+    width: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -423,20 +423,17 @@ footer {
     flex-wrap: wrap;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
     .rentals main-wrapper div {
-      height: 180px;
-      width: 180px;
-      margin-top: 15px;
+      height: 200px;
+      width: 200px;
+      margin-top: 17px;
       cursor: pointer;
       text-align: center; }
       .rentals main-wrapper div img {
-        height: 180px;
-        width: 180px; }
+        height: 100%;
+        width: 100%; }
 
 .portfolio {
   height: 100%;
@@ -553,7 +550,7 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px; }
   .cakes main-wrapper {
-    max-width: 590px;
+    width: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -561,15 +558,12 @@ footer {
     flex-wrap: wrap;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
     .cakes main-wrapper div {
-      height: 180px;
-      width: 180px;
-      margin-top: 15px;
+      height: 200px;
+      width: 200px;
+      margin-top: 17px;
       cursor: pointer;
       text-align: center; }
       .cakes main-wrapper div img {
@@ -577,7 +571,7 @@ footer {
         width: 100%; }
 
 .desserts {
-  width: 620px;
+  width: 650px;
   height: 100%;
   font-family: 'Quicksand', sans-serif;
   color: #988676;
@@ -616,7 +610,7 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px; }
   .desserts main-wrapper {
-    width: 590px;
+    width: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -624,15 +618,12 @@ footer {
     flex-wrap: wrap;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
     .desserts main-wrapper div {
-      height: 180px;
-      width: 180px;
-      margin-top: 15px;
+      height: 200px;
+      width: 200px;
+      margin-top: 17px;
       cursor: pointer;
       text-align: center; }
       .desserts main-wrapper div img {
@@ -640,7 +631,7 @@ footer {
         width: 100%; }
 
 .celebration {
-  width: 620px;
+  width: 650px;
   height: 100%;
   font-family: 'Quicksand', sans-serif;
   color: #988676;
@@ -679,7 +670,7 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px; }
   .celebration main-wrapper {
-    width: 590px;
+    width: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -687,15 +678,12 @@ footer {
     flex-wrap: wrap;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
     .celebration main-wrapper div {
-      height: 180px;
-      width: 180px;
-      margin-top: 15px;
+      height: 200px;
+      width: 200px;
+      margin-top: 17px;
       cursor: pointer;
       text-align: center; }
       .celebration main-wrapper div img {

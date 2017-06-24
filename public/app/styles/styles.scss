@@ -338,7 +338,7 @@ footer {
 // RENTALS VIEW //
 
 .rentals {
-    width: 620px;
+    width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
@@ -364,23 +364,22 @@ footer {
         }
 
     main-wrapper {
-        width: 590px;
+        width: 650px;
         display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-content: space-around;
-            align-items: center;
+            align-content: space-between;
 
         div {
-            height: 180px;
-            width: 180px;
-            margin-top: 15px;
+            height: 200px;
+            width: 200px;
+            margin-top: 17px;
             cursor: pointer;
             text-align: center;
 
             img {
-                height: 180px;
-                width: 180px;
+                height: 100%;
+                width: 100%;
             }
         }
     }
@@ -476,17 +475,16 @@ footer {
         }
 
     main-wrapper {
-        max-width: 590px;
+        width: 650px;
         display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-content: space-around;
-            align-items: center;
+            align-content: space-between;
 
         div {
-            height: 180px;
-            width: 180px;
-            margin-top: 15px;
+            height: 200px;
+            width: 200px;
+            margin-top: 17px;
             cursor: pointer;
             text-align: center;
 
@@ -502,7 +500,7 @@ footer {
 // DESSERTS VIEW //
 
 .desserts {
-    width: 620px;
+    width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
@@ -528,17 +526,16 @@ footer {
         }
 
     main-wrapper {
-        width: 590px;
+        width: 650px;
         display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-content: space-around;
-            align-items: center;
+            align-content: space-between;
 
         div {
-            height: 180px;
-            width: 180px;
-            margin-top: 15px;
+            height: 200px;
+            width: 200px;
+            margin-top: 17px;
             cursor: pointer;
             text-align: center;
 
@@ -554,7 +551,7 @@ footer {
 // CELEBRATION VIEW //
 
 .celebration {
-    width: 620px;
+    width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
@@ -580,17 +577,16 @@ footer {
         }
 
     main-wrapper {
-        width: 590px;
+        width: 650px;
         display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-content: space-around;
-            align-items: center;
+            align-content: space-between;
 
         div {
-            height: 180px;
-            width: 180px;
-            margin-top: 15px;
+            height: 200px;
+            width: 200px;
+            margin-top: 17px;
             cursor: pointer;
             text-align: center;
 
@@ -601,6 +597,9 @@ footer {
         }
     }
 }
+
+
+// PRICING //
 
 .pricing {
     width: 620px;
