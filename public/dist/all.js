@@ -36,7 +36,7 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
     }).state('cake', {
         url: '/cake/:id',
         templateUrl: "./app/views/cake.html",
-        controller: 'cakesCtrl'
+        controller: 'cakeCtrl'
     }).state('celebration', {
         url: '/celebration',
         templateUrl: "./app/views/celebration.html",
@@ -49,7 +49,23 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
 });
 'use strict';
 
-angular.module('cakeApp').controller('cakesCtrl', function ($scope, mainSvc, $stateParams) {
+angular.module('cakeApp').controller('cakeCtrl', function ($scope, mainSvc, $stateParams) {
+
+    console.log('cakeCtrl');
+
+    $scope.getCake = function (response) {
+        mainSvc.getCake($stateParams.id).then(function (response) {
+            console.log(response);
+            $scope.oneCake = response.data[0];
+            console.log($scope.oneCake);
+        });
+    };
+
+    $scope.getCake();
+});
+'use strict';
+
+angular.module('cakeApp').controller('cakesCtrl', function ($scope, mainSvc, $stateParams, $state) {
 
     $scope.getCakes = function (response) {
         mainSvc.getCakes().then(function (response) {
@@ -59,16 +75,11 @@ angular.module('cakeApp').controller('cakesCtrl', function ($scope, mainSvc, $st
     };
 
     $scope.getCakes();
-    console.log($stateParams.id);
+    // console.log($stateParams.id)
 
-    $scope.getCake = function (response) {
-        mainSvc.getCake($stateParams.id).then(function (response) {
-            $scope.cake = response.data;
-            console.log($scope.cake);
-        });
+    $scope.cake = function (id) {
+        $state.go("cake", { id: id });
     };
-
-    $scope.getCake();
 });
 'use strict';
 
@@ -135,7 +146,7 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     this.getCake = function (id) {
         return $http({
             method: "GET",
-            url: '/api/cakes/' + id
+            url: '/api/cake/' + id
         });
     };
 

@@ -1,8 +1,6 @@
 module.exports = {
     
     getCakes: function (req, res, next) {
-        //get the cakes
-        // var db = app.get(db)
         req.app.get('db').getCakes().then(function (response) {
             // console.log(response)
             res.send(response);
@@ -10,7 +8,7 @@ module.exports = {
     },
 
     getCake: function (req, res, next) {
-        // console.log(typeof Number(req.params.id))
+        console.log("test", req.params.id)
         req.app.get('db').getCake(req.params.id).then(function(response) {
             res.send(response)
         }).catch(function(err){

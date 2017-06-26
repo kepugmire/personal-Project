@@ -58,7 +58,7 @@ app.post("/auth/local", (req, res) => {
 
 
 app.get('/api/cakes', controller.getCakes) 
-app.get('/api/cakes/:id', controller.getCake)
+app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
 
 

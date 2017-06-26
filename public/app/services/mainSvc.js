@@ -24,7 +24,7 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     this.getCake = function (id) {
         return $http({
             method: "GET",
-            url: '/api/cakes/' + id
+            url: '/api/cake/' + id
         })
     }
 

@@ -1,4 +1,4 @@
-angular.module('cakeApp').controller('cakesCtrl', function ($scope, mainSvc, $stateParams) {
+angular.module('cakeApp').controller('cakesCtrl', function ($scope, mainSvc, $stateParams, $state) {
 
 $scope.getCakes = function(response) {
    mainSvc.getCakes().then(function(response) {
@@ -8,17 +8,11 @@ $scope.getCakes = function(response) {
 }
 
 $scope.getCakes()
-console.log($stateParams.id)
+// console.log($stateParams.id)
 
-$scope.getCake = function(response) {
-    mainSvc.getCake($stateParams.id).then(function(response){
-        $scope.cake = response.data
-        console.log($scope.cake)
-    })
+$scope.cake = function(id){
+    $state.go("cake", {id: id})
 }
-
-$scope.getCake()
-
 
 
 })

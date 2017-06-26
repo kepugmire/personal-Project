@@ -51,7 +51,7 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
         .state('cake', {
             url: '/cake/:id',
             templateUrl: "./app/views/cake.html",
-            controller: 'cakesCtrl'
+            controller: 'cakeCtrl'
         })
 
         .state('celebration', {
