@@ -10,7 +10,8 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
 
         .state('contact', {
             url: '/contact',
-            templateUrl: "./app/views/contact.html"
+            templateUrl: "./app/views/contact.html",
+            controller: "mainCtrl"
         })
 
         .state('pricing', {
@@ -44,6 +45,12 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
         .state('cakes', {
             url: '/cakes',
             templateUrl: "./app/views/cakes.html",
+            controller: 'cakesCtrl'
+        })
+
+        .state('cake', {
+            url: '/cake/:id',
+            templateUrl: "./app/views/cake.html",
             controller: 'cakesCtrl'
         })
 

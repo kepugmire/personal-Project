@@ -52,6 +52,8 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  header img {
+    cursor: pointer !important; }
 
 footer {
   height: 200px;
@@ -305,9 +307,11 @@ footer {
     height: 36px;
     width: 120px;
     margin-bottom: 15px;
+    margin-top: 15px;
     background-color: black;
     color: white;
-    font-weight: bolder; }
+    font-weight: bolder;
+    font-size: 15px; }
   .contact div:last-child {
     color: gray;
     font-size: 15px;
@@ -450,7 +454,7 @@ footer {
   align-items: center; }
   .portfolio header {
     height: 50px;
-    width: 450px;
+    width: 407px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

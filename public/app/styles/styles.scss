@@ -34,6 +34,9 @@ header {
     display: flex;
         justify-content: center;
         align-items: center;
+    img {
+        cursor: pointer !important;
+    }
 }
 
 footer {
@@ -267,9 +270,11 @@ footer {
         height: 36px;
         width: 120px;
         margin-bottom: 15px;
+        margin-top: 15px;
         background-color: black;
         color: white;
         font-weight: bolder;
+        font-size: 15px
     }
 
     div:last-child {
@@ -398,7 +403,7 @@ footer {
 
     header {
         height: 50px;
-        width: 450px;
+        width: 407px;
         display: flex;
             align-items: center;
             justify-content: center;
@@ -631,11 +636,3 @@ footer {
             justify-content: center;
     }
 }
-
-
-
-
-
-
-
-

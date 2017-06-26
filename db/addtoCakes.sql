@@ -1,0 +1,1 @@
+insert into cakes (image_path) values ($1);

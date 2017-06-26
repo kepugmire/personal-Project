@@ -6,6 +6,5 @@ angular.module('cakeApp').controller('loginCtrl', function ($scope, mainSvc) {
         mainSvc.login(user)
     }
 
-    
 
 })

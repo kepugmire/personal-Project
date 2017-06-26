@@ -4,7 +4,15 @@ const app = express()
 const session = require('express-session')
 const massive = require('massive')
 const config = require('./config')
+const controller = require('./controller')
 // console.log(config)
+
+massive(config.database).then(db => {
+    // console.log(db)
+    app.set('db', db)
+}).catch(err => {
+    // console.log(err)
+})
 
 var port = 3000;
 
@@ -17,12 +25,8 @@ app.use(session({
     saveUninitialized: false
 }));
 
-massive(config.database).then(db => {
-    // console.log(db)
-    app.set('db', db)
-}).catch(err => {
-    // console.log(err)
-})
+
+
 
 
 // ----- END POINTS ----- //
@@ -48,14 +52,19 @@ app.post("/auth/local", (req, res) => {
     })
 })
 
-app.post("/auth/createuser", (req, res) => {
+// var db = req.app.get('db')
 
-})
-
-
+// console.log(db)
 
 
+app.get('/api/cakes', controller.getCakes) 
+app.get('/api/cakes/:id', controller.getCake)
+app.post('/api/contacts', controller.contactInfo)
 
+
+// app.post("/auth/createuser", (req, res) => {
+
+// })
 
 
 

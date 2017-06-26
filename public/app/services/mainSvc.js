@@ -14,6 +14,42 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     };
 
 
+    this.getCakes = function () {
+        return $http({
+            method: "GET",
+            url: '/api/cakes'
+        })
+    }
+
+    this.getCake = function (id) {
+        return $http({
+            method: "GET",
+            url: '/api/cakes/' + id
+        })
+    }
+
+
+    this.contact = function (firstname, lastname, email, subject, day, month, year, message, referral) {
+        // console.log(firstname, lastname, email, subject, day, month, year, message, referral)
+        return $http({
+            method: "POST",
+            url: '/api/contacts',
+            data: {
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                subject: subject,
+                day: day,
+                month: month,
+                year: year,
+                message: message,
+                referral: referral
+            }
+        })
+    }
+
+
+
 
 
     // this.getData = function(){
