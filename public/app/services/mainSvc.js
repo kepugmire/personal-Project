@@ -48,15 +48,11 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     }
 
 
+    this.getTemp = function (event) {
+        console.log(event)
+        return $http.get(`http://api.wunderground.com/api/97eb89c0721b402a/planner_${event.mmonth}${event.dday}${event.mmonth}${event.dday}/q/UT/${event.city}.json`)
+    }
 
 
-
-    // this.getData = function(){
-    //     return $http.get('https://practiceapi.devmountain.com/products')
-    // }
-
-    // this.getId = function(id){
-    //     return $http.get('https://practiceapi.devmountain.com/products/' + id)
-    // }
 
 })

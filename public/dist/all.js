@@ -109,10 +109,26 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
     $scope.test = mainSvc.test;
 
-    $scope.sendContact = function () {
-        // console.log("something", $scope.firstnname)
-        mainSvc.contact($scope.firstnname, $scope.lastnname, $scope.e_mail, $scope.ssubject, $scope.dday, $scope.mmonth, $scope.yyear, $scope.mmessage, $scope.rreferral);
+    // $scope.sendContact = function () {
+    //     // console.log("something", $scope.firstnname)
+    //     mainSvc.contact(
+    //         $scope.firstnname, $scope.lastnname, $scope.e_mail, $scope.ssubject, $scope.dday, $scope.mmonth, $scope.yyear, $scope.mmessage, $scope.rreferral
+    //     )
+    // }
+
+    $scope.recTemp = function (event) {
+        mainSvc.getTemp(event).then(function (response) {
+            var resp = response.data.trip;
+            alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n" + "\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
+            console.log(resp);
+        });
     };
+
+    //+ "LOW: " + resp.temp_low.min.F + "°"
+
+    // "RAIN: " + resp.chance_of.chanceofrainday.percentage + "%" +
+
+    // "SNOW: " + resp.chance_of.chanceofsnowday.percentage + "%" + "\n" +
 });
 'use strict';
 
@@ -167,11 +183,8 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
         });
     };
 
-    // this.getData = function(){
-    //     return $http.get('https://practiceapi.devmountain.com/products')
-    // }
-
-    // this.getId = function(id){
-    //     return $http.get('https://practiceapi.devmountain.com/products/' + id)
-    // }
+    this.getTemp = function (event) {
+        console.log(event);
+        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.mmonth + event.dday + event.mmonth + event.dday + '/q/UT/' + event.city + '.json');
+    };
 });

@@ -31,12 +31,12 @@
                 <h3>event date</h3>
                 <div class="input-wrapper">
                     <div>
-                        <input type="number" ng-model="mmonth">
+                        <input type="number" ng-model="event.mmonth">
                         <p>MM</p>
                     </div>
 
                     <div>
-                        <input type="number" ng-model="dday">
+                        <input type="number" ng-model="event.dday">
                         <p>DD</p>
                     </div>
 
@@ -44,6 +44,17 @@
                         <input type="number" ng-model="yyear">
                         <p>YYYY</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="date">
+                <h3>event location</h3>
+                <div class="input-wrapper">
+                    <div>
+                        <input type="text" ng-model="event.city">
+                        <p>city</p>
+                    </div>
+                    <button style="margin: 0" ng-click="recTemp(event)">CHECK</button>
                 </div>
             </div>
 
