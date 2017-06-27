@@ -30,7 +30,6 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
 
     this.contact = function (firstname, lastname, email, subject, day, month, year, message, referral) {
-        // console.log(firstname, lastname, email, subject, day, month, year, message, referral)
         return $http({
             method: "POST",
             url: '/api/contacts',

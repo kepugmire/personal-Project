@@ -54,6 +54,10 @@ header {
   align-items: center; }
   header img {
     cursor: pointer !important; }
+  header img:hover {
+    -webkit-transform: scale(1.005);
+    transform: scale(1.005);
+    opacity: .9; }
 
 footer {
   height: 200px;
@@ -150,6 +154,93 @@ footer {
     background: url("../../app/assets/img/paraHome.jpg");
     background-attachment: fixed;
     background-size: cover; }
+  .home div:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    opacity: .95;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out; }
+
+.portfolio {
+  height: 100%;
+  width: 590px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .portfolio header {
+    height: 50px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: #988676;
+    margin-bottom: 70px; }
+  .portfolio .port-view {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .portfolio .port-view parabox {
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .portfolio .port-view div {
+      height: 180px;
+      width: 180px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 30px;
+      font-weight: bolder;
+      color: gray;
+      text-shadow: 0px 0px 5px white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background: url("../../app/assets/img/paracakes.jpg") no-repeat;
+      background-attachment: fixed;
+      background-size: cover; }
+    .portfolio .port-view div:hover {
+      -webkit-transform: scale(1.02);
+      transform: scale(1.02);
+      opacity: .95;
+      -webkit-transition: .1s ease-in-out;
+      transition: .1s ease-in-out; }
 
 .contact {
   width: 620px;
@@ -239,7 +330,7 @@ footer {
     outline: 2px solid gray; }
   .contact h3 {
     color: black;
-    margin-top: 7px;
+    margin-top: 10px;
     margin-bottom: 1px; }
   .contact p {
     color: gray;
@@ -312,10 +403,16 @@ footer {
     color: white;
     font-weight: bolder;
     font-size: 15px; }
-  .contact div:last-child {
+  .contact button:hover {
+    background: transparent;
+    color: #3a7999;
+    -webkit-box-shadow: inset 0 0 0 3px #3a7999;
+    box-shadow: inset 0 0 0 3px #3a7999; }
+  .contact .lastText {
     color: gray;
     font-size: 15px;
-    text-align: center; }
+    text-align: center;
+    margin-top: 15px; }
 
 .prcInfo {
   height: 100%;
@@ -445,81 +542,12 @@ footer {
       .rentals main-wrapper div img {
         height: 100%;
         width: 100%; }
-
-.portfolio {
-  height: 100%;
-  width: 590px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .portfolio header {
-    height: 50px;
-    width: 407px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border-top: 3px solid #988676;
-    border-bottom: 3px solid #988676;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
-    color: #988676;
-    margin-bottom: 70px; }
-  .portfolio .port-view {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .portfolio .port-view parabox {
-      width: 100%;
-      height: 100%;
-      background: white;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .portfolio .port-view div {
-      height: 180px;
-      width: 180px;
-      cursor: pointer;
-      border-radius: 50%;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 30px;
-      font-weight: bolder;
-      color: gray;
-      text-shadow: 0px 0px 5px white;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      background: url("../../app/assets/img/paracakes.jpg") no-repeat;
-      background-attachment: fixed;
-      background-size: cover; }
+      .rentals main-wrapper div img:hover {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        opacity: .8;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
 
 .cakes {
   width: 620px;
@@ -580,6 +608,12 @@ footer {
       .cakes main-wrapper div img {
         height: 100%;
         width: 100%; }
+      .cakes main-wrapper div img:hover {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        opacity: .8;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
 
 .desserts {
   width: 650px;
@@ -640,6 +674,12 @@ footer {
       .desserts main-wrapper div img {
         height: 100%;
         width: 100%; }
+      .desserts main-wrapper div img:hover {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        opacity: .8;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
 
 .celebration {
   width: 650px;
@@ -700,6 +740,12 @@ footer {
       .celebration main-wrapper div img {
         height: 100%;
         width: 100%; }
+      .celebration main-wrapper div img:hover {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        opacity: .8;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
 
 .pricing {
   width: 620px;

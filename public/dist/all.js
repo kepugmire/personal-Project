@@ -55,7 +55,6 @@ angular.module('cakeApp').controller('cakeCtrl', function ($scope, mainSvc, $sta
 
     $scope.getCake = function (response) {
         mainSvc.getCake($stateParams.id).then(function (response) {
-            console.log(response);
             $scope.oneCake = response.data[0];
             console.log($scope.oneCake);
         });
@@ -151,7 +150,6 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     };
 
     this.contact = function (firstname, lastname, email, subject, day, month, year, message, referral) {
-        // console.log(firstname, lastname, email, subject, day, month, year, message, referral)
         return $http({
             method: "POST",
             url: '/api/contacts',

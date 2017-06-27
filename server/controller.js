@@ -8,7 +8,7 @@ module.exports = {
     },
 
     getCake: function (req, res, next) {
-        console.log("test", req.params.id)
+        // console.log("test", req.params.id)
         req.app.get('db').getCake(req.params.id).then(function(response) {
             res.send(response)
         }).catch(function(err){

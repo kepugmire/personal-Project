@@ -37,6 +37,11 @@ header {
     img {
         cursor: pointer !important;
     }
+    img:hover {
+        transform: scale(1.005);
+        opacity: .9;
+        // transition: .05s ease-in-out;
+    }
 }
 
 footer {
@@ -47,28 +52,28 @@ footer {
         justify-content: center;
         align-items: center;
 
-        .welcome {
-            height: 50px;
-            width: 450px;
-            display: flex;
-                align-items: center;
-                justify-content: center;
-            border-top: 5px solid #988676;
-            border-bottom: 5px solid #988676;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 25px;
-            color: #988676;
-        }
+    .welcome {
+        height: 50px;
+        width: 450px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 5px solid #988676;
+        border-bottom: 5px solid #988676;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        color: #988676;
+    }
 
-        div {
-            height: 70px;
-            width: 200px;
-            display: flex;
-                justify-content: space-around;
-                align-items: center;
-        }
+    div {
+        height: 70px;
+        width: 200px;
+        display: flex;
+            justify-content: space-around;
+            align-items: center;
+    }
 
-        .fa-instagram {
+    .fa-instagram {
         color: white;
         text-shadow: 0px 0px 30px gray;
         background: gray;
@@ -78,6 +83,7 @@ footer {
             bottom: 40px;
     }
 }
+
 
 
 // HOME VIEW //
@@ -114,6 +120,75 @@ footer {
         background-attachment: fixed;
         background-size: cover;
     }
+    div:hover {
+        transform: scale(1.02);
+        opacity: .95;
+        transition: .1s ease-in-out;
+    }
+}
+
+
+// PORTFOLIO VIEW //
+
+.portfolio {
+    height: 100%;
+    width: 590px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    header {
+        height: 50px;
+        width: 407px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        color: #988676;
+        margin-bottom: 70px;
+        }
+
+    .port-view {
+        width: 100%;
+        height: 100%;
+        display: flex;
+            align-items: center;
+
+        parabox {
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+                justify-content: space-around;
+                align-items: center
+        }
+
+        div {
+            height: 180px;
+            width: 180px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            color: gray;
+            text-shadow: 0px 0px 5px white;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            background: url("../../app/assets/img/paracakes.jpg") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        div:hover {
+            transform: scale(1.02);
+            opacity: .95;
+            transition: .1s ease-in-out;
+        }
+    }
 }
 
 
@@ -141,7 +216,7 @@ footer {
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
         color: #988676;
-        }
+    }
 
     main-wrapper {
         height: 100vh;
@@ -188,7 +263,7 @@ footer {
 
     h3 {
         color: black;
-        margin-top: 7px;
+        margin-top: 10px;
         margin-bottom: 1px;
     }
     
@@ -219,14 +294,12 @@ footer {
     }
 
     .email {
-
         input {
             width: 100%;
         }
     }
 
     .subject {
-
         input {
             width: 100%;
         }
@@ -276,11 +349,17 @@ footer {
         font-weight: bolder;
         font-size: 15px
     }
+    button:hover {
+        background: rgba(0,0,0,0);
+        color: #3a7999;
+        box-shadow: inset 0 0 0 3px #3a7999;
+    }
 
-    div:last-child {
+    .lastText {
         color: gray;
         font-size: 15px;
         text-align: center;
+        margin-top: 15px;
     }
 }
 
@@ -395,66 +474,11 @@ footer {
                 height: 100%;
                 width: 100%;
             }
-        }
-    }
-}
-
-
-
-// PORTFOLIO VIEW //
-
-.portfolio {
-    height: 100%;
-    width: 590px;
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    header {
-        height: 50px;
-        width: 407px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-        border-top: 3px solid #988676;
-        border-bottom: 3px solid #988676;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 25px;
-        color: #988676;
-        margin-bottom: 70px;
-        }
-
-    .port-view {
-        width: 100%;
-        height: 100%;
-        display: flex;
-            align-items: center;
-
-        parabox {
-            width: 100%;
-            height: 100%;
-            background: white;
-            display: flex;
-                justify-content: space-around;
-                align-items: center
-        }
-
-        div {
-            height: 180px;
-            width: 180px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 30px;
-            font-weight: bolder;
-            color: gray;
-            text-shadow: 0px 0px 5px white;
-            display: flex;
-                align-items: center;
-                justify-content: center;
-            background: url("../../app/assets/img/paracakes.jpg") no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+            img:hover {
+                transform: scale(1.01);
+                opacity: .8;
+                transition: .3s ease-in-out;
+            }
         }
     }
 }
@@ -505,6 +529,11 @@ footer {
             img {
                 height: 100%;
                 width: 100%;
+            }
+            img:hover {
+                transform: scale(1.01);
+                opacity: .8;
+                transition: .3s ease-in-out;
             }
         }
     }
@@ -557,6 +586,11 @@ footer {
                 height: 100%;
                 width: 100%;
             }
+            img:hover {
+                transform: scale(1.01);
+                opacity: .8;
+                transition: .3s ease-in-out;
+            }
         }
     }
 }
@@ -608,6 +642,11 @@ footer {
                 height: 100%;
                 width: 100%;
             }
+            img:hover {
+                transform: scale(1.01);
+                opacity: .8;
+                transition: .3s ease-in-out;
+            }
         }
     }
 }
@@ -645,3 +684,20 @@ footer {
             justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
