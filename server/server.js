@@ -8,11 +8,8 @@ const controller = require('./controller')
 // console.log(config)
 
 massive(config.database).then(db => {
-    // console.log(db)
     app.set('db', db)
-}).catch(err => {
-    // console.log(err)
-})
+}).catch(err => {})
 
 var port = 3000;
 
@@ -57,7 +54,7 @@ app.post("/auth/local", (req, res) => {
 // console.log(db)
 
 
-app.get('/api/cakes', controller.getCakes) 
+app.get('/api/cakes', controller.getCakes)
 app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
 

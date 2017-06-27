@@ -29,28 +29,18 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     }
 
 
-    this.contact = function (firstname, lastname, email, subject, day, month, year, message, referral) {
+    this.contact = function (con) {
         return $http({
             method: "POST",
             url: '/api/contacts',
-            data: {
-                firstname: firstname,
-                lastname: lastname,
-                email: email,
-                subject: subject,
-                day: day,
-                month: month,
-                year: year,
-                message: message,
-                referral: referral
-            }
+            data: con
         })
     }
 
 
     this.getTemp = function (event) {
         console.log(event)
-        return $http.get(`http://api.wunderground.com/api/97eb89c0721b402a/planner_${event.mmonth}${event.dday}${event.mmonth}${event.dday}/q/UT/${event.city}.json`)
+        return $http.get(`http://api.wunderground.com/api/97eb89c0721b402a/planner_${event.month}${event.day}${event.month}${event.day}/q/UT/${event.city}.json`)
     }
 
 

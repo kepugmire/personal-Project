@@ -109,26 +109,21 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
     $scope.test = mainSvc.test;
 
-    // $scope.sendContact = function () {
-    //     // console.log("something", $scope.firstnname)
-    //     mainSvc.contact(
-    //         $scope.firstnname, $scope.lastnname, $scope.e_mail, $scope.ssubject, $scope.dday, $scope.mmonth, $scope.yyear, $scope.mmessage, $scope.rreferral
-    //     )
-    // }
+    $scope.event = {};
+
+    $scope.sendContact = function (con) {
+        con.day = $scope.event.day;
+        con.month = $scope.event.month;
+        mainSvc.contact(con);
+    };
 
     $scope.recTemp = function (event) {
         mainSvc.getTemp(event).then(function (response) {
             var resp = response.data.trip;
-            alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n" + "\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
+            alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
             console.log(resp);
         });
     };
-
-    //+ "LOW: " + resp.temp_low.min.F + "°"
-
-    // "RAIN: " + resp.chance_of.chanceofrainday.percentage + "%" +
-
-    // "SNOW: " + resp.chance_of.chanceofsnowday.percentage + "%" + "\n" +
 });
 'use strict';
 
@@ -165,26 +160,16 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
         });
     };
 
-    this.contact = function (firstname, lastname, email, subject, day, month, year, message, referral) {
+    this.contact = function (con) {
         return $http({
             method: "POST",
             url: '/api/contacts',
-            data: {
-                firstname: firstname,
-                lastname: lastname,
-                email: email,
-                subject: subject,
-                day: day,
-                month: month,
-                year: year,
-                message: message,
-                referral: referral
-            }
+            data: con
         });
     };
 
     this.getTemp = function (event) {
         console.log(event);
-        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.mmonth + event.dday + event.mmonth + event.dday + '/q/UT/' + event.city + '.json');
+        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.month + event.day + event.month + event.day + '/q/UT/' + event.city + '.json');
     };
 });

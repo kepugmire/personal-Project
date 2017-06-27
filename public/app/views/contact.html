@@ -7,11 +7,11 @@
                 <h3>name</h3>
                 <div class='input-wrapper'>
                     <div>
-                        <input type="text" ng-model="firstnname">
+                        <input type="text" ng-model="con.firstname">
                         <p>first name</p>
                     </div>
                     <div>
-                        <input type="text" style="width: 100%" ng-model="lastnname">
+                        <input type="text" style="width: 100%" ng-model="con.lastname">
                         <p>last name</p>
                     </div>
                 </div>
@@ -19,29 +19,29 @@
 
             <div class="email">
                 <h3>email address</h3>
-                <input type="e_mail">
+                <input type="e_mail" ng-model="con.email">
             </div>
 
             <div class="subject">
                 <h3>subject</h3>
-                <input type="text" ng-model="ssubject">
+                <input type="text" ng-model="con.subject">
             </div>
 
             <div class="date">
                 <h3>event date</h3>
                 <div class="input-wrapper">
                     <div>
-                        <input type="number" ng-model="event.mmonth">
+                        <input type="number" ng-model="event.month", "con.month">
                         <p>MM</p>
                     </div>
 
                     <div>
-                        <input type="number" ng-model="event.dday">
+                        <input type="number" ng-model="event.day", "con.day">
                         <p>DD</p>
                     </div>
 
                     <div>
-                        <input type="number" ng-model="yyear">
+                        <input type="number" ng-model="con.year">
                         <p>YYYY</p>
                     </div>
                 </div>
@@ -60,15 +60,15 @@
 
             <div class="message">
                 <h3>message</h3>
-                <textarea class="textarea"  ng-model="mmessage"></textarea>
+                <textarea class="textarea"  ng-model="con.message"></textarea>
             </div>
 
             <div class="referral">
                 <h3>how did you hear about annie's cakes?</h3>
-                <input type="text" ng-model="rreferral">
+                <input type="text" ng-model="con.referral">
             </div>
 
-            <button ng-click="sendContact()">SUBMIT</button>
+            <button ng-click="sendContact(con)">SUBMIT</button>
 
             <div class="lastText">feel free to also contact me directly through my email at anniepugmire@gmail.com</div>
         </form>
