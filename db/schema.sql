@@ -1,8 +1,3 @@
-INSERT INTO users
-(first_name, last_name, auth)
-VALUES
-('asdf', 'asdfasdf', 'asdfasdfasdf');
-
 CREATE TABLE contacts (
     id Serial Primary Key,
     firstname varchar,
@@ -21,12 +16,17 @@ CREATE TABLE cakes (
     image_path varchar
 )
 
-
-
-CREATE TABLE cakes (
-    id Serial Primary Key, 
-    image_path varchar 
+CREATE TABLE favorites (
+    userId integer,
+    image_path varchar
 )
+
+CREATE TABLE users (
+    userId integer,
+    username varchar,
+    password varchar
+)
+
 
 INSERT INTO cakes (image_path)
 VALUES 

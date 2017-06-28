@@ -5,6 +5,8 @@ const session = require('express-session')
 const massive = require('massive')
 const config = require('./config')
 const controller = require('./controller')
+const passport = require('passport')
+const Auth0Strategy = require('passport-auth0')
 // console.log(config)
 
 massive(config.database).then(db => {
@@ -15,53 +17,80 @@ var port = 3000;
 
 app.use(bodyParser.json())
 app.use(express.static(`${__dirname}./../public/`))
-
 app.use(session({
     secret: config.sessionSecret,
     resave: false,
     saveUninitialized: false
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
+// **********************************
+// **********************************
+passport.use(new Auth0Strategy({
+        domain: config.auth0.domain,
+        clientID: config.auth0.clientID,
+        clientSecret: config.auth0.clientSecret,
+        callbackURL: '/auth/callback'
+    },
+    function (accessToken, refreshToken, extraParams, profile, done) {
+        // console.log(profile)
+        var db = app.get('db')
+        //Find user in database
+        db.getUserByAuthId(profile.id).then(function (user) {
+            user = user[0];
+            if (!user) { //if there isn't one, we'll create one!
+                // console.log('CREATING USER');
+                db.createUserByAuth([profile.displayName, profile.id]).then(function (user) {
+                    // console.log('USER CREATED', user);
+                    return done(null, user[0]); // GOES TO SERIALIZE USER
+                })
+            } else { //when we find the user, return it
+                // console.log('FOUND USER', user);
+                return done(null, user);
+            }
+        })
+    }
+));
+passport.serializeUser(function (userA, done) {
+    // console.log('serializing', userA);
+    var userB = userA;
+    done(null, userB); //PUTS 'USER' ON THE SESSION
+});
+passport.deserializeUser(function (userB, done) {
+    var userC = userB;
+    done(null, userC); //PUTS 'USER' ON REQ.USER
+});
+app.get('/auth', passport.authenticate('auth0'));
+
+app.get('/auth/callback',
+    passport.authenticate('auth0', {
+        successRedirect: '/'
+    }),
+    function (req, res) {
+        res.status(200).send(req.user);
+    })
+app.get('/auth/me', function (req, res) {
+    if (!req.user) return res.sendStatus(404);
+    res.status(200).send(req.user);
+})
+app.get('/auth/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
+})
+// **********************************
+// **********************************
 
 
 
 // ----- END POINTS ----- //
-
-app.get("/auth/me", (req, res) => {
-    if (req.session.user) {
-        // console.log(req.session.user)
-        res.send(req.session.user)
-    } else {
-        res.status(404).send("User not found")
-    }
-})
-
-app.post("/auth/local", (req, res) => {
-    var db = req.app.get('db')
-    db.checkLogin([req.body.username, req.body.password]).then(user => {
-        if (user.length === 0) {
-            res.status(404).send("User not found")
-        } else {
-            req.session.user = user[0]
-            res.status(200).send(user[0])
-        }
-    })
-})
-
-// var db = req.app.get('db')
-
-// console.log(db)
-
 
 app.get('/api/cakes', controller.getCakes)
 app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
 
 
-// app.post("/auth/createuser", (req, res) => {
-
-// })
 
 
 

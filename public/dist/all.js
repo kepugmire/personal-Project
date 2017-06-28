@@ -107,8 +107,6 @@ angular.module('cakeApp').controller('loginCtrl', function ($scope, mainSvc) {
 
 angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
-    $scope.test = mainSvc.test;
-
     $scope.event = {};
 
     $scope.sendContact = function (con) {
@@ -121,7 +119,7 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
         mainSvc.getTemp(event).then(function (response) {
             var resp = response.data.trip;
             alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
-            console.log(resp);
+            // console.log(resp)
         });
     };
 });
@@ -134,8 +132,6 @@ angular.module('cakeApp').controller('rentalsCtrl', function ($scope, mainSvc) {
 'use strict';
 
 angular.module('cakeApp').service('mainSvc', function ($http, $state) {
-
-    this.test = "Svc is working";
 
     this.login = function (user) {
         $http.post("/auth/local", user).then(function (response) {
@@ -169,7 +165,6 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     };
 
     this.getTemp = function (event) {
-        console.log(event);
         return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.month + event.day + event.month + event.day + '/q/UT/' + event.city + '.json');
     };
 });

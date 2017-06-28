@@ -1,8 +1,5 @@
 angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
-    this.test = "Svc is working"
-
-
 
     this.login = function (user) {
         $http.post("/auth/local", user).then(response => {
@@ -39,7 +36,6 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
 
     this.getTemp = function (event) {
-        console.log(event)
         return $http.get(`http://api.wunderground.com/api/97eb89c0721b402a/planner_${event.month}${event.day}${event.month}${event.day}/q/UT/${event.city}.json`)
     }
 
