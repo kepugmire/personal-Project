@@ -40,7 +40,7 @@ passport.use(new Auth0Strategy({
         //Find user in database
         db.getUserByAuthId(profile.id).then(function (user) {
             user = user[0];
-            console.log(user)
+            // console.log(user)
             if (!user) {
                 // console.log('CREATING USER');
                 db.createUserByAuth([profile.displayName, profile.id]).then(function (user) {
@@ -61,7 +61,10 @@ passport.serializeUser(function (userA, done) {
 });
 passport.deserializeUser(function (userB, done) {
     var userC = userB;
+    app.get('db').getUserAndFaves(userC.password).then(function(response){
+        userC.favorites = response
     done(null, userC); //PUTS 'USER' ON REQ.USER
+    })
 });
 app.get('/auth', passport.authenticate('auth0'));
 
@@ -92,7 +95,7 @@ app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
 // app.get('/api/getuser', controller.getUser)
 app.post('/postfavorite', controller.postFavorite)
-
+// app.get('/api/favorite', controller.getFavorite)
 
 
 

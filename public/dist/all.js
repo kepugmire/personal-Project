@@ -55,15 +55,14 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
 
 angular.module('cakeApp').controller('cakeCtrl', function ($scope, mainSvc, $stateParams) {
 
-    console.log('cakeCtrl');
+    // console.log('cakeCtrl')
 
     $scope.getCake = function (response) {
         mainSvc.getCake($stateParams.id).then(function (response) {
             $scope.oneCake = response.data[0];
-            console.log($scope.oneCake);
+            // console.log($scope.oneCake)
         });
     };
-
     $scope.getCake();
 });
 'use strict';
@@ -101,14 +100,6 @@ angular.module('cakeApp').controller('dessertsCtrl', function ($scope, mainSvc) 
 angular.module('cakeApp').controller('flavorsCtrl', function ($scope, mainSvc) {});
 'use strict';
 
-angular.module('cakeApp').controller('loginCtrl', function ($scope, mainSvc) {
-
-    $scope.login = function (user) {
-        mainSvc.login(user);
-    };
-});
-'use strict';
-
 angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
     $scope.event = {};
@@ -132,19 +123,21 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     $scope.getUser = function () {
         mainSvc.getUser().then(function (user) {
             $scope.favorites = user;
-            console.log(user);
+            // console.log(user)
         });
     };
     $scope.getUser();
 
     $scope.addToFavorites = function (fav) {
-        console.log(fav);
+        // console.log(fav)
         var favoriteObj = {
-            "userid": $scope.favorites.userid,
+            "userid": $scope.favorites.password,
             "image_path": fav
         };
         console.log(favoriteObj);
-        mainSvc.postFavorites(favoriteObj);
+        mainSvc.postFavorites(favoriteObj).then(function (response) {
+            $scope.getUser();
+        });
     };
 });
 'use strict';
@@ -194,14 +187,13 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
     this.getUser = function () {
         return $http.get('/auth/me').then(function (res) {
-            console.log(res.data);
             return res.data;
         }).catch(function (err) {
             console.log(err);
         });
     };
 
-    this.postFavorites = function (fav) {
-        return $http.post('/postfavorite', fav);
+    this.postFavorites = function (favObj) {
+        return $http.post('/postfavorite', favObj);
     };
 });

@@ -25,20 +25,26 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     $scope.getUser = function () {
         mainSvc.getUser().then(function (user) {
             $scope.favorites = user
-            console.log(user)
+            // console.log(user)
         })
     }
     $scope.getUser();
 
+
+
     $scope.addToFavorites = function(fav){
-        console.log(fav)
+        // console.log(fav)
         var favoriteObj = {
-            "userid": $scope.favorites.userid,
+            "userid": $scope.favorites.password,
             "image_path": fav
         } 
         console.log(favoriteObj)
-        mainSvc.postFavorites(favoriteObj)
+        mainSvc.postFavorites(favoriteObj).then(function(response){
+            $scope.getUser()
+        })
     }
+
+
 
 
 

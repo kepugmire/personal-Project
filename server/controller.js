@@ -1,5 +1,5 @@
 module.exports = {
-    
+
     getCakes: function (req, res, next) {
         req.app.get('db').getCakes().then(function (response) {
             // console.log(response)
@@ -9,9 +9,9 @@ module.exports = {
 
     getCake: function (req, res, next) {
         // console.log("test", req.params.id)
-        req.app.get('db').getCake(req.params.id).then(function(response) {
+        req.app.get('db').getCake(req.params.id).then(function (response) {
             res.send(response)
-        }).catch(function(err){
+        }).catch(function (err) {
             console.log(err)
         })
     },
@@ -19,7 +19,7 @@ module.exports = {
     contactInfo: function (req, res, next) {
         // console.log(req.body)
         var contact = [req.body.firstname, req.body.lastname, req.body.email, req.body.subject, req.body.day, req.body.month, req.body.year, req.body.message, req.body.referral]
-        req.app.get('db').contactInfo(contact).then(function(response){
+        req.app.get('db').contactInfo(contact).then(function (response) {
             res.send("Contact info submitted")
         })
     },
@@ -29,9 +29,16 @@ module.exports = {
             req.body.userid,
             req.body.image_path
         ]
-        req.app.get('db').addToFavorites(favorite).then(function(response){
-            res.send("Favorite submitted")
+        req.app.get('db').addToFavorites(favorite).then(function (response) {
+            res.send(response)
+            console.log(response)
         })
-    }
+    },
+
+    // getFavorite: function (req,res,next) {
+    //     req.app.get('db').getUserByAuthId(req.body.userid).then(function(response){
+    //         res.send(response)
+    //     })
+    // }
 
 }

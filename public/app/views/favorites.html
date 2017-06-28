@@ -1,19 +1,18 @@
 <div class="view-wrapper">
 
-    <section class="cakes" ui-sref="cakes">
+    <section class="cakes">
         <header>your favorites</header>
 
         <main-wrapper>
 
-            <!--<div ng-repeat="favs in favorites">
-                <img ng-src="{{user.image_path}}" ng-click="cake(wcake.id)">
+            <div ng-repeat="fav in favorites.favorites">
+                <img ng-src="{{fav.image_path}}" ng-click="cake(fav.id)">
+            </div>
 
-                
-            </div>-->
-                <div>{{favorites.image_path}}</div>
+            
 
         </main-wrapper>
 
     </section>
 
-</div>
+    </div>

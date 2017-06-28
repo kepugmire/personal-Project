@@ -18,7 +18,7 @@ CREATE TABLE cakes (
 
 CREATE TABLE favorites (
     userId varchar,
-    image_path varchar
+    image_path varchar unique not null
 )
 
 CREATE TABLE users (

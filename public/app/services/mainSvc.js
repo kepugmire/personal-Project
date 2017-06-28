@@ -41,7 +41,6 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
     this.getUser = function() {
         return $http.get('/auth/me').then(function(res){
-            console.log(res.data)
             return res.data;
         })
         .catch(function(err){
@@ -50,8 +49,8 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     }
 
 
-    this.postFavorites = function(fav){
-        return $http.post('/postfavorite', fav)
+    this.postFavorites = function(favObj){
+        return $http.post('/postfavorite', favObj)
     }
 
 
