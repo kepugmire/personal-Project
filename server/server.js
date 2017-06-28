@@ -40,13 +40,14 @@ passport.use(new Auth0Strategy({
         //Find user in database
         db.getUserByAuthId(profile.id).then(function (user) {
             user = user[0];
-            if (!user) { //if there isn't one, we'll create one!
+            console.log(user)
+            if (!user) {
                 // console.log('CREATING USER');
                 db.createUserByAuth([profile.displayName, profile.id]).then(function (user) {
                     // console.log('USER CREATED', user);
-                    return done(null, user[0]); // GOES TO SERIALIZE USER
+                    return done(null, user[0]);
                 })
-            } else { //when we find the user, return it
+            } else {
                 // console.log('FOUND USER', user);
                 return done(null, user);
             }
@@ -89,8 +90,8 @@ app.get('/auth/logout', function (req, res) {
 app.get('/api/cakes', controller.getCakes)
 app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
-
-
+// app.get('/api/getuser', controller.getUser)
+app.post('/postfavorite', controller.postFavorite)
 
 
 

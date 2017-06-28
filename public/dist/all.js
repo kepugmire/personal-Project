@@ -45,6 +45,10 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
         url: '/login',
         templateUrl: "./app/views/login.html",
         controller: 'loginCtrl'
+    }).state('favorites', {
+        url: '/favorites',
+        templateUrl: "./app/views/favorites.html",
+        controller: 'mainCtrl'
     });
 });
 'use strict';
@@ -109,6 +113,8 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
     $scope.event = {};
 
+    $scope.favorites;
+
     $scope.sendContact = function (con) {
         con.day = $scope.event.day;
         con.month = $scope.event.month;
@@ -121,6 +127,24 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
             alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
             // console.log(resp)
         });
+    };
+
+    $scope.getUser = function () {
+        mainSvc.getUser().then(function (user) {
+            $scope.favorites = user;
+            console.log(user);
+        });
+    };
+    $scope.getUser();
+
+    $scope.addToFavorites = function (fav) {
+        console.log(fav);
+        var favoriteObj = {
+            "userid": $scope.favorites.userid,
+            "image_path": fav
+        };
+        console.log(favoriteObj);
+        mainSvc.postFavorites(favoriteObj);
     };
 });
 'use strict';
@@ -166,5 +190,18 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
     this.getTemp = function (event) {
         return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.month + event.day + event.month + event.day + '/q/UT/' + event.city + '.json');
+    };
+
+    this.getUser = function () {
+        return $http.get('/auth/me').then(function (res) {
+            console.log(res.data);
+            return res.data;
+        }).catch(function (err) {
+            console.log(err);
+        });
+    };
+
+    this.postFavorites = function (fav) {
+        return $http.post('/postfavorite', fav);
     };
 });

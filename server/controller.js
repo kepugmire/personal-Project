@@ -17,15 +17,21 @@ module.exports = {
     },
 
     contactInfo: function (req, res, next) {
-        console.log(req.body)
+        // console.log(req.body)
         var contact = [req.body.firstname, req.body.lastname, req.body.email, req.body.subject, req.body.day, req.body.month, req.body.year, req.body.message, req.body.referral]
         req.app.get('db').contactInfo(contact).then(function(response){
             res.send("Contact info submitted")
         })
+    },
+
+    postFavorite: function (req, res, next) {
+        var favorite = [
+            req.body.userid,
+            req.body.image_path
+        ]
+        req.app.get('db').addToFavorites(favorite).then(function(response){
+            res.send("Favorite submitted")
+        })
     }
 
-
-
-
-    
 }

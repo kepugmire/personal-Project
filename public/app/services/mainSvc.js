@@ -39,6 +39,23 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
         return $http.get(`http://api.wunderground.com/api/97eb89c0721b402a/planner_${event.month}${event.day}${event.month}${event.day}/q/UT/${event.city}.json`)
     }
 
+    this.getUser = function() {
+        return $http.get('/auth/me').then(function(res){
+            console.log(res.data)
+            return res.data;
+        })
+        .catch(function(err){
+            console.log(err)
+        })
+    }
+
+
+    this.postFavorites = function(fav){
+        return $http.post('/postfavorite', fav)
+    }
+
+
+
 
 
 })

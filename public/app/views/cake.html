@@ -6,8 +6,10 @@
         <main-wrapper>
 
             <div style="height: 500px; width: 500px">
-                <img ng-src="{{oneCake.image_path}}" style="transform: none; opacity: 1; transition: none; cursor: auto">
+                <img ng-src="{{oneCake.image_path}}" style="transform: none; opacity: 1; transition: none; cursor: auto" ng-click="addToFavorites(oneCake.image_path)">
             </div>
+
+
 
         </main-wrapper>
 

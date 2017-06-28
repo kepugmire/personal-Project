@@ -2,6 +2,8 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 
     $scope.event = {};
 
+    $scope.favorites;
+
     $scope.sendContact = function (con) {
         con.day = $scope.event.day
         con.month = $scope.event.month
@@ -9,15 +11,34 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     }
 
 
+
     $scope.recTemp = function (event) {
-            mainSvc.getTemp(event).then(function (response) {
-                let resp = response.data.trip
-                alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°")
-                // console.log(resp)
-            })
+        mainSvc.getTemp(event).then(function (response) {
+            let resp = response.data.trip
+            alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°")
+            // console.log(resp)
+        })
     }
 
 
+
+    $scope.getUser = function () {
+        mainSvc.getUser().then(function (user) {
+            $scope.favorites = user
+            console.log(user)
+        })
+    }
+    $scope.getUser();
+
+    $scope.addToFavorites = function(fav){
+        console.log(fav)
+        var favoriteObj = {
+            "userid": $scope.favorites.userid,
+            "image_path": fav
+        } 
+        console.log(favoriteObj)
+        mainSvc.postFavorites(favoriteObj)
+    }
 
 
 

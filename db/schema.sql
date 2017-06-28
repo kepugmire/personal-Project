@@ -17,12 +17,11 @@ CREATE TABLE cakes (
 )
 
 CREATE TABLE favorites (
-    userId integer,
+    userId varchar,
     image_path varchar
 )
 
 CREATE TABLE users (
-    userId integer,
     username varchar,
     password varchar
 )
