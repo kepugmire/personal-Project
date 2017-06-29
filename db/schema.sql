@@ -18,13 +18,17 @@ CREATE TABLE cakes (
 
 CREATE TABLE favorites (
     userId varchar,
-    image_path varchar unique not null
+    image_path varchar,
+    id integer
 )
 
 CREATE TABLE users (
     username varchar,
     password varchar
 )
+
+
+
 
 
 INSERT INTO cakes (image_path)

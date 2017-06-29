@@ -27,7 +27,8 @@ module.exports = {
     postFavorite: function (req, res, next) {
         var favorite = [
             req.body.userid,
-            req.body.image_path
+            req.body.image_path,
+            req.body.id
         ]
         req.app.get('db').addToFavorites(favorite).then(function (response) {
             res.send(response)
@@ -35,10 +36,14 @@ module.exports = {
         })
     },
 
-    // getFavorite: function (req,res,next) {
-    //     req.app.get('db').getUserByAuthId(req.body.userid).then(function(response){
-    //         res.send(response)
-    //     })
-    // }
+    deleteFav: (req, res) => {
+        console.log(req.params.notFav)
+        req.app.get('db').deleteFav(req.params.notFav).then((response) => {
+            res.send('Deleted!')
+        })
+    }
+
+
+
 
 }

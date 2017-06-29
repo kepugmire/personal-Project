@@ -54,6 +54,13 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
     }
 
 
+    this.deleteFav = (notFav) => {
+    return $http.delete('/deleteFav/' + notFav)
+  }
+
+
+
+
 
 
 

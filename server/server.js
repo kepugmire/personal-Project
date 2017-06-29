@@ -93,9 +93,8 @@ app.get('/auth/logout', function (req, res) {
 app.get('/api/cakes', controller.getCakes)
 app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
-// app.get('/api/getuser', controller.getUser)
 app.post('/postfavorite', controller.postFavorite)
-// app.get('/api/favorite', controller.getFavorite)
+app.delete('/deleteFav/:notFav', controller.deleteFav)
 
 
 

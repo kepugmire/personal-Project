@@ -1,2 +1,2 @@
-insert into favorites (userid, image_path)
-values ($1, $2);
+insert into favorites (userid, image_path, id)
+values ($1, $2, $3);

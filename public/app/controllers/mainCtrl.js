@@ -25,26 +25,39 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     $scope.getUser = function () {
         mainSvc.getUser().then(function (user) {
             $scope.favorites = user
-            // console.log(user)
+            console.log(user)
         })
     }
     $scope.getUser();
 
 
 
-    $scope.addToFavorites = function(fav){
-        // console.log(fav)
-        var favoriteObj = {
-            "userid": $scope.favorites.password,
-            "image_path": fav
-        } 
-        console.log(favoriteObj)
-        mainSvc.postFavorites(favoriteObj).then(function(response){
+    $scope.addToFavorites = function (fav) {
+        var favFound = false
+        for (var i = 0; i < $scope.favorites.favorites.length; i++) {
+            if ($scope.favorites.favorites[i].image_path == fav) {
+                favFound = true
+                break
+            }
+        }
+        if (!favFound) {
+            var favoriteObj = {
+                "userid": $scope.favorites.password,
+                "image_path": fav.image_path,
+                "id": fav.id
+            }
+            console.log(favoriteObj)
+            mainSvc.postFavorites(favoriteObj).then(function (response) {
+                $scope.getUser()
+            })
+        }
+    }
+
+    $scope.deleteFav = (notFav) => {
+        mainSvc.deleteFav(notFav).then((response) => {
             $scope.getUser()
         })
     }
-
-
 
 
 
