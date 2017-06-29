@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
     text-decoration-line: none;
     text-decoration-style: none;
@@ -14,43 +16,41 @@ body {
     background-color: white;
     background-size: cover;
     font-family: 'Quicksand', sans-serif;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2) inset;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset;
     display: flex;
-        justify-content: center;
+    justify-content: center;
 }
 
 .main-container {
     height: 100%;
     width: 960px;
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header {
     height: 290px;
     width: 100%;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     img {
         height: 200px;
         cursor: pointer !important;
     }
     img:hover {
         transform: scale(1.005);
-        opacity: .9;
-        // transition: .05s ease-in-out;
+        opacity: .9; // transition: .05s ease-in-out;
     }
     div {
         height: 45px;
         width: 550px;
         display: flex;
-            justify-content: space-between;
-            align-items: center;
-
+        justify-content: space-between;
+        align-items: center;
         span {
             height: 20px;
             font-size: 20px;
@@ -78,82 +78,76 @@ footer {
     height: 200px;
     width: 100%;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .welcome {
         height: 50px;
         width: 450px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 5px solid #988676;
         border-bottom: 5px solid #988676;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
         color: #988676;
     }
-
     div {
         height: 70px;
         width: 200px;
         display: flex;
-            justify-content: space-around;
-            align-items: center;
+        justify-content: space-around;
+        align-items: center;
     }
-
     .fa-instagram {
         color: white;
         text-shadow: 0px 0px 30px gray;
         background: gray;
         border-radius: 50%;
         position: absolute;
-            left: 50%;
-            bottom: 40px;
+        left: 50%;
+        bottom: 40px;
     }
 }
 
 // LOGIN VIEW //
-
 .login {
     height: 40px;
     width: 120px;
     margin-bottom: 25px;
     margin-top: 25px;
     background-color: white;
-    color: #988676;
-    // font-weight: bolder;
+    color: #988676; // font-weight: bolder;
     font-size: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
-    }
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
 .login:hover {
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     color: #988676;
     box-shadow: inset 0 0 0 1px gray;
 }
+
 a:visited {
     display: none;
 }
 
 // HOME VIEW //
-
 .home {
     width: 590px;
     height: 390px;
-
     parabox {
         width: 100%;
         height: 100%;
         background: white;
         display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
     }
-
     div {
         height: 180px;
         width: 180px;
@@ -165,8 +159,8 @@ a:visited {
         color: white;
         text-shadow: 0px 0px 10px black;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         background: url("../../app/assets/img/paraHome.jpg");
         background-attachment: fixed;
         background-size: cover;
@@ -178,45 +172,39 @@ a:visited {
     }
 }
 
-
 // PORTFOLIO VIEW //
-
 .portfolio {
     height: 100%;
     width: 590px;
     display: flex;
-        flex-direction: column;
-        align-items: center;
-
+    flex-direction: column;
+    align-items: center;
     header {
         height: 50px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
         color: #988676;
         margin-bottom: 70px;
-        }
-
+    }
     .port-view {
         width: 100%;
         height: 100%;
         display: flex;
-            align-items: center;
-
+        align-items: center;
         parabox {
             width: 100%;
             height: 100%;
             background: white;
             display: flex;
-                justify-content: space-around;
-                align-items: center
+            justify-content: space-around;
+            align-items: center
         }
-
         div {
             height: 180px;
             width: 180px;
@@ -228,8 +216,8 @@ a:visited {
             color: gray;
             text-shadow: 0px 0px 5px white;
             display: flex;
-                align-items: center;
-                justify-content: center;
+            align-items: center;
+            justify-content: center;
             background: url("../../app/assets/img/paracakes.jpg") no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -242,25 +230,22 @@ a:visited {
     }
 }
 
-
 // CONTACT VIEW //
-
 .contact {
     width: 620px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
@@ -268,14 +253,12 @@ a:visited {
         font-size: 25px;
         color: #988676;
     }
-
     main-wrapper {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-    }  
-
+    }
     main-wrapper div {
         width: 475px;
         display: flex;
@@ -283,19 +266,16 @@ a:visited {
         justify-content: space-between;
         align-items: flex-start;
     }
-
     input {
         height: 30px;
         font-size: 15px;
         border: 2px solid lightgray;
         border-radius: 4px;
     }
-
     input:focus {
         outline: 2px solid gray;
         border-radius: 5px;
     }
-
     .textarea {
         height: 30px;
         font-size: 15px;
@@ -308,89 +288,71 @@ a:visited {
         min-height: 130px;
         max-height: 300px;
     }
-
     .textarea:focus {
         outline: 2px solid gray;
     }
-
     h3 {
         color: black;
         margin-top: 10px;
         margin-bottom: 1px;
     }
-    
     p {
         color: gray;
         font-size: 10px;
         margin: 3px;
     }
-
     .name {
-
         .input-wrapper {
             display: flex;
             flex-direction: row;
             width: 100%;
-
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-start;
-
                 input {
-                     width: 95%;
+                    width: 95%;
                 }
             }
         }
     }
-
     .email {
         input {
             width: 100%;
         }
     }
-
     .subject {
         input {
             width: 100%;
         }
     }
-
     .date {
-
         .input-wrapper {
             display: flex;
             flex-direction: row;
             width: 50%;
-
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-start;
-
                 input {
-                     width: 85%;
+                    width: 85%;
                 }
             }
         }
     }
-
     .message {
-
         input {
             width: 100%;
         }
     }
-
     .referral {
-
         input {
             width: 100%;
         }
     }
-
     button {
         height: 36px;
         width: 120px;
@@ -403,11 +365,10 @@ a:visited {
         border-radius: 5px;
     }
     button:hover {
-        background: rgba(0,0,0,0);
+        background: rgba(0, 0, 0, 0);
         color: black;
         box-shadow: inset 0 0 0 2px gray;
     }
-
     .lastText {
         color: gray;
         font-size: 15px;
@@ -417,7 +378,6 @@ a:visited {
 }
 
 // PRICING VIEW //
-
 .prcInfo {
     height: 100%;
     width: 100%;
@@ -427,12 +387,11 @@ a:visited {
 }
 
 // FLAVORS VIEW //
-
 .view-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
-        justify-content: center;
+    justify-content: center;
 }
 
 .flavors {
@@ -441,31 +400,27 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        align-items: center;
-
+    flex-direction: column;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         height: 400px;
         width: 100%;
         display: flex;
-            justify-content: center;
-        
+        justify-content: center;
         div {
             width: 200px;
-
             p {
                 font-size: 23px;
                 margin-bottom: 10px;
@@ -480,49 +435,43 @@ a:visited {
     }
 }
 
-
 // RENTALS VIEW //
-
 .rentals {
     width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        align-items: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         width: 650px;
         display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
-
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         div {
             height: 200px;
             width: 200px;
             margin-top: 17px;
             cursor: pointer;
             text-align: center;
-
             img {
                 height: 100%;
                 width: 100%;
@@ -536,49 +485,43 @@ a:visited {
     }
 }
 
-
 // WEDDING CAKES VIEW //
-
 .cakes {
     width: 620px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        align-items: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         width: 650px;
         display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
-
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         div {
             height: 200px;
             width: 200px;
             margin-top: 17px;
             cursor: pointer;
             text-align: center;
-
             img {
                 height: 100%;
                 width: 100%;
@@ -592,49 +535,43 @@ a:visited {
     }
 }
 
-
 // DESSERTS VIEW //
-
 .desserts {
     width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        align-items: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         width: 650px;
         display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
-
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         div {
             height: 200px;
             width: 200px;
             margin-top: 17px;
             cursor: pointer;
             text-align: center;
-
             img {
                 height: 100%;
                 width: 100%;
@@ -648,49 +585,43 @@ a:visited {
     }
 }
 
-
 // CELEBRATION VIEW //
-
 .celebration {
     width: 650px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        align-items: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         width: 650px;
         display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-between;
-
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
         div {
             height: 200px;
             width: 200px;
             margin-top: 17px;
             cursor: pointer;
             text-align: center;
-
             img {
                 height: 100%;
                 width: 100%;
@@ -704,53 +635,82 @@ a:visited {
     }
 }
 
+// DETAILS VIEW //
+
+.details {
+    width: 650px;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #988676;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    header {
+        min-height: 51px;
+        max-height: 51px;
+        width: 407px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 3px solid #988676;
+        border-bottom: 3px solid #988676;
+        margin-bottom: 35px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }
+    main-wrapper {
+        width: 650px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+        div {
+            height: 200px;
+            width: 200px;
+            margin-top: 17px;
+            cursor: pointer;
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+            img:hover {
+                transform: scale(1.01);
+                opacity: .8;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}
 
 // PRICING //
-
 .pricing {
     width: 620px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-        flex-direction: column;
-        align-items: center;
-
+    flex-direction: column;
+    align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-            align-items: center;
-            justify-content: center;
+        align-items: center;
+        justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
-        }
-
+    }
     main-wrapper {
         height: 100%;
         min-height: 200px;
         width: 100%;
         display: flex;
-            justify-content: center;
+        justify-content: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

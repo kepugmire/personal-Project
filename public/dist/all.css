@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   -webkit-text-decoration-line: none;
   text-decoration-line: none;
@@ -799,6 +802,70 @@ a:visited {
         height: 100%;
         width: 100%; }
       .celebration main-wrapper div img:hover {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        opacity: .8;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
+
+.details {
+  width: 650px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #988676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .details header {
+    min-height: 51px;
+    max-height: 51px;
+    width: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 3px solid #988676;
+    border-bottom: 3px solid #988676;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; }
+  .details main-wrapper {
+    width: 650px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
+    .details main-wrapper div {
+      height: 200px;
+      width: 200px;
+      margin-top: 17px;
+      cursor: pointer; }
+      .details main-wrapper div img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px; }
+      .details main-wrapper div img:hover {
         -webkit-transform: scale(1.01);
         transform: scale(1.01);
         opacity: .8;
