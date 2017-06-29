@@ -16,7 +16,17 @@
     <div class="main-container">
 
 
-        <header><img src="./app/assets/img/logo.jpg" style="height: 70%" ui-sref='home'></header>
+        <header>
+            <div>
+                <span ui-sref='home'>home</span>
+                <span ui-sref='login'>login</span>
+                <span ui-sref='favorites'>favorites</span>
+                <span><a href="https://www.instagram.com/annies.c.a.k.e.s/?hl=en">instagram</a></span>
+            </div>
+            <img src="./app/assets/img/logo.jpg" ui-sref='home'>
+
+            <div></div>
+        </header>
 
 
         <ui-view></ui-view>

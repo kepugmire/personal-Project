@@ -63,7 +63,6 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
         .state('login', {
             url: '/login',
             templateUrl: "./app/views/login.html",
-            controller: 'loginCtrl'
         })
 
         .state('favorites', {

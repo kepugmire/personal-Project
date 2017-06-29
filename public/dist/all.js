@@ -43,8 +43,7 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
         controller: 'celebrationCtrl'
     }).state('login', {
         url: '/login',
-        templateUrl: "./app/views/login.html",
-        controller: 'loginCtrl'
+        templateUrl: "./app/views/login.html"
     }).state('favorites', {
         url: '/favorites',
         templateUrl: "./app/views/favorites.html",

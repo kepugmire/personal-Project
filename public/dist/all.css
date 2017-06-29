@@ -46,6 +46,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -53,11 +57,42 @@ header {
   -ms-flex-align: center;
   align-items: center; }
   header img {
+    height: 200px;
     cursor: pointer !important; }
   header img:hover {
     -webkit-transform: scale(1.005);
     transform: scale(1.005);
     opacity: .9; }
+  header div {
+    height: 45px;
+    width: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    header div span {
+      height: 20px;
+      font-size: 20px;
+      color: #988676;
+      cursor: pointer !important;
+      display: inline-block; }
+    header div span:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0;
+      background: transparent;
+      -webkit-transition: width .2s ease, background-color .2s ease;
+      transition: width .2s ease, background-color .2s ease; }
+    header div span:hover:after {
+      width: 100%;
+      background: #988676; }
 
 footer {
   height: 200px;
