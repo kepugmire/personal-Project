@@ -114,7 +114,28 @@ footer {
     }
 }
 
+// LOGIN VIEW //
 
+.login {
+    height: 40px;
+    width: 120px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-color: white;
+    color: #988676;
+    // font-weight: bolder;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+    }
+.login:hover {
+    background: rgba(0,0,0,0);
+    color: #988676;
+    box-shadow: inset 0 0 0 1px gray;
+}
+a:visited {
+    display: none;
+}
 
 // HOME VIEW //
 
@@ -249,7 +270,7 @@ footer {
     }
 
     main-wrapper {
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -272,6 +293,7 @@ footer {
 
     input:focus {
         outline: 2px solid gray;
+        border-radius: 5px;
     }
 
     .textarea {
@@ -377,12 +399,13 @@ footer {
         background-color: black;
         color: white;
         font-weight: bolder;
-        font-size: 15px
+        font-size: 15px;
+        border-radius: 5px;
     }
     button:hover {
         background: rgba(0,0,0,0);
-        color: #3a7999;
-        box-shadow: inset 0 0 0 3px #3a7999;
+        color: black;
+        box-shadow: inset 0 0 0 2px gray;
     }
 
     .lastText {

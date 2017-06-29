@@ -147,6 +147,27 @@ footer {
     left: 50%;
     bottom: 40px; }
 
+.login {
+  height: 40px;
+  width: 120px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  background-color: white;
+  color: #988676;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
+
+.login:hover {
+  background: transparent;
+  color: #988676;
+  -webkit-box-shadow: inset 0 0 0 1px gray;
+  box-shadow: inset 0 0 0 1px gray; }
+
+a:visited {
+  display: none; }
+
 .home {
   width: 590px;
   height: 390px; }
@@ -314,7 +335,7 @@ footer {
     font-size: 25px;
     color: #988676; }
   .contact main-wrapper {
-    height: 100vh;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -345,7 +366,8 @@ footer {
     border: 2px solid lightgray;
     border-radius: 4px; }
   .contact input:focus {
-    outline: 2px solid gray; }
+    outline: 2px solid gray;
+    border-radius: 5px; }
   .contact .textarea {
     height: 30px;
     font-size: 15px;
@@ -437,12 +459,13 @@ footer {
     background-color: black;
     color: white;
     font-weight: bolder;
-    font-size: 15px; }
+    font-size: 15px;
+    border-radius: 5px; }
   .contact button:hover {
     background: transparent;
-    color: #3a7999;
-    -webkit-box-shadow: inset 0 0 0 3px #3a7999;
-    box-shadow: inset 0 0 0 3px #3a7999; }
+    color: black;
+    -webkit-box-shadow: inset 0 0 0 2px gray;
+    box-shadow: inset 0 0 0 2px gray; }
   .contact .lastText {
     color: gray;
     font-size: 15px;

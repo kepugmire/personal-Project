@@ -49,11 +49,12 @@
 
             <div class="date">
                 <h3>event location</h3>
-                <div class="input-wrapper">
-                    <div>
-                        <input type="text" ng-model="event.city">
+                <div class="input-wrapper" style="width: 101%">
+                    <div style="width: 150px">
+                        <input type="text" ng-model="event.city" style="width: 95%">
                         <p>city</p>
                     </div>
+                    <span style="text-align: center; padding-top: 7px; color: gray">likely weather conditions...</span>
                     <button style="margin: 0" ng-click="recTemp(event)">CHECK</button>
                 </div>
             </div>
