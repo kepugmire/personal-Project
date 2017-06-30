@@ -52,61 +52,6 @@ angular.module('cakeApp', ['ui.router']).config(function ($stateProvider, $urlRo
 });
 'use strict';
 
-angular.module('cakeApp').service('mainSvc', function ($http, $state) {
-
-    this.login = function (user) {
-        $http.post("/auth/local", user).then(function (response) {
-            $state.go('home');
-            return response.data;
-        }).catch(function (err) {
-            alert(err);
-        });
-    };
-
-    this.getCakes = function () {
-        return $http({
-            method: "GET",
-            url: '/api/cakes'
-        });
-    };
-
-    this.getCake = function (id) {
-        return $http({
-            method: "GET",
-            url: '/api/cake/' + id
-        });
-    };
-
-    this.contact = function (con) {
-        return $http({
-            method: "POST",
-            url: '/api/contacts',
-            data: con
-        });
-    };
-
-    this.getTemp = function (event) {
-        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.month + event.day + event.month + event.day + '/q/UT/' + event.city + '.json');
-    };
-
-    this.getUser = function () {
-        return $http.get('/auth/me').then(function (res) {
-            return res.data;
-        }).catch(function (err) {
-            console.log(err);
-        });
-    };
-
-    this.postFavorites = function (favObj) {
-        return $http.post('/postfavorite', favObj);
-    };
-
-    this.deleteFav = function (notFav) {
-        return $http.delete('/deleteFav/' + notFav);
-    };
-});
-'use strict';
-
 angular.module('cakeApp').controller('cakeCtrl', function ($scope, mainSvc, $stateParams) {
 
     // console.log('cakeCtrl')
@@ -214,4 +159,59 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
 angular.module('cakeApp').controller('rentalsCtrl', function ($scope, mainSvc) {
 
     $scope.rentals = ["../app/assets/img/rentals/r24.jpg", "../app/assets/img/rentals/r23.jpg", "../app/assets/img/rentals/r22.jpg", "../app/assets/img/rentals/r21.jpg", "../app/assets/img/rentals/r20.jpg", "../app/assets/img/rentals/r19.jpg", "../app/assets/img/rentals/r17.jpg", "../app/assets/img/rentals/r16.jpg", "../app/assets/img/rentals/r15.jpg", "../app/assets/img/rentals/r14.jpg", "../app/assets/img/rentals/r13.jpg", "../app/assets/img/rentals/r12.jpg", "../app/assets/img/rentals/r11.jpg", "../app/assets/img/rentals/r10.jpg", "../app/assets/img/rentals/r9.jpg", "../app/assets/img/rentals/r8.jpg", "../app/assets/img/rentals/r7.jpg", "../app/assets/img/rentals/r6.jpg", "../app/assets/img/rentals/r5.jpg", "../app/assets/img/rentals/r4.jpg", "../app/assets/img/rentals/r3.jpg", "../app/assets/img/rentals/r2.jpg", "../app/assets/img/rentals/r1.jpg"];
+});
+'use strict';
+
+angular.module('cakeApp').service('mainSvc', function ($http, $state) {
+
+    this.login = function (user) {
+        $http.post("/auth/local", user).then(function (response) {
+            $state.go('home');
+            return response.data;
+        }).catch(function (err) {
+            alert(err);
+        });
+    };
+
+    this.getCakes = function () {
+        return $http({
+            method: "GET",
+            url: '/api/cakes'
+        });
+    };
+
+    this.getCake = function (id) {
+        return $http({
+            method: "GET",
+            url: '/api/cake/' + id
+        });
+    };
+
+    this.contact = function (con) {
+        return $http({
+            method: "POST",
+            url: '/api/contacts',
+            data: con
+        });
+    };
+
+    this.getTemp = function (event) {
+        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/planner_' + event.month + event.day + event.month + event.day + '/q/UT/' + event.city + '.json');
+    };
+
+    this.getUser = function () {
+        return $http.get('/auth/me').then(function (res) {
+            return res.data;
+        }).catch(function (err) {
+            console.log(err);
+        });
+    };
+
+    this.postFavorites = function (favObj) {
+        return $http.post('/postfavorite', favObj);
+    };
+
+    this.deleteFav = function (notFav) {
+        return $http.delete('/deleteFav/' + notFav);
+    };
 });
