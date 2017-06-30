@@ -185,7 +185,7 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     $scope.addToFavorites = function (fav) {
         var favFound = false;
         for (var i = 0; i < $scope.favorites.favorites.length; i++) {
-            if ($scope.favorites.favorites[i].image_path == fav) {
+            if ($scope.favorites.favorites[i].id == fav.id) {
                 favFound = true;
                 break;
             }
