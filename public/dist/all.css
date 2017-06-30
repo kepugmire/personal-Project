@@ -201,7 +201,6 @@ a:visited {
     font-size: 30px;
     font-weight: bolder;
     color: white;
-    text-shadow: 0px 0px 10px black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -214,12 +213,16 @@ a:visited {
     background: url("../../app/assets/img/paraHome.jpg");
     background-attachment: fixed;
     background-size: cover; }
+    .home div h3 {
+      text-shadow: 0px 0px 20px black; }
   .home div:hover {
-    opacity: .95; }
+    opacity: .8;
+    -webkit-transition: .5s ease;
+    transition: .5s ease; }
 
 .portfolio {
   height: 100%;
-  width: 590px;
+  width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,8 +273,8 @@ a:visited {
       -ms-flex-align: center;
       align-items: center; }
     .portfolio .port-view div {
-      height: 180px;
-      width: 180px;
+      height: 190px;
+      width: 190px;
       cursor: pointer;
       border-radius: 50%;
       font-family: 'Quicksand', sans-serif;
@@ -292,11 +295,9 @@ a:visited {
       background-attachment: fixed;
       background-size: cover; }
     .portfolio .port-view div:hover {
-      -webkit-transform: scale(1.02);
-      transform: scale(1.02);
-      opacity: .95;
-      -webkit-transition: .1s ease-in-out;
-      transition: .1s ease-in-out; }
+      opacity: .8;
+      -webkit-transition: .5s ease;
+      transition: .5s ease; }
 
 .contact {
   width: 620px;
@@ -657,19 +658,6 @@ a:visited {
     justify-content: space-around;
     -ms-flex-line-pack: justify;
     align-content: space-between; }
-    .cakes main-wrapper div {
-      height: 200px;
-      width: 200px;
-      margin-top: 17px;
-      cursor: pointer;
-      text-align: center; }
-      .cakes main-wrapper div img {
-        height: 100%;
-        width: 100%; }
-      .cakes main-wrapper div img:hover {
-        opacity: .8;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out; }
 
 .desserts {
   width: 650px;
@@ -890,14 +878,15 @@ a:visited {
         -ms-flex-align: center;
         align-items: center; }
         .details main-wrapper .container .middle .text {
-          background-color: gray;
+          background-color: white;
           cursor: pointer;
-          color: white;
+          color: #988676;
+          font-weight: bolder;
           font-size: 25px;
           padding: 16px 32px;
           border-radius: 5px;
-          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6); }
+          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
         .details main-wrapper .container .middle .icon {
           margin-top: 20px;
           height: 66px;
@@ -912,11 +901,11 @@ a:visited {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          color: gray;
+          color: white;
           border-radius: 50%;
-          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
-          background: white; }
+          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+          background: #988676; }
         .details main-wrapper .container .middle .icon:hover {
           -webkit-box-shadow: inset 0 0 0 1px gray;
           box-shadow: inset 0 0 0 1px gray; }
@@ -924,7 +913,7 @@ a:visited {
           -webkit-box-shadow: inset 0 0 0 1px gray;
           box-shadow: inset 0 0 0 1px gray; }
   .details .container:hover img {
-    opacity: 0.9; }
+    opacity: 0.7; }
   .details .container:hover .middle {
     opacity: 1; }
 
@@ -1057,13 +1046,14 @@ a:visited {
         align-items: center; }
         .favorites main-wrapper div .middle .text {
           margin-top: 0px;
+          padding-bottom: 4px;
           height: 40px;
           width: 120px;
           background-color: white;
           cursor: pointer;
           font-weight: bolder;
           color: #988676;
-          font-size: 20px;
+          font-size: 25px;
           border-radius: 5px;
           -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
@@ -1081,3 +1071,19 @@ a:visited {
           box-shadow: inset 0 0 0 1px gray; }
       .favorites main-wrapper div .middle:hover {
         opacity: 1; }
+
+.imgGrids, .cakes main-wrapper div {
+  height: 200px;
+  width: 200px;
+  margin-top: 17px; }
+  .imgGrids img, .cakes main-wrapper div img {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px; }
+  .imgGrids img:hover, .cakes main-wrapper div img:hover {
+    opacity: 0.7; }

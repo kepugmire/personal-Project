@@ -6,25 +6,24 @@
         <main-wrapper>
 
             <div ng-repeat="fav in favorites.favorites">
+
                 <img ng-src="{{fav.image_path}}">
-                
+
                 <div class="middle">
 
                     <div class="text" ng-click="deleteFav(fav.id)">remove</div>
 
-                    <!--<div class="icon">
-
-                        <i class="fa fa-plus-times fa-3x" aria-hidden="true" ng-click="deleteFav(fav.id)">
-                        </i>
-
-                    </div>-->
-
                 </div>
+
             </div>
 
-
         </main-wrapper>
-
     </section>
-    <!--ng-click="cake(fav.id)"-->
 </div>
+
+
+<!--ng-click="cake(fav.id)"-->
+
+<!--<div class="icon">
+<i class="fa fa-plus-times fa-3x" aria-hidden="true" ng-click="deleteFav(fav.id)"></i>
+</div>-->

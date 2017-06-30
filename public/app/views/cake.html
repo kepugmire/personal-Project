@@ -1,16 +1,21 @@
 <div class="view-wrapper">
 
     <section class="details">
-        <header ui-sref='cakes' style="cursor: pointer">cakes</header>
+        <header ui-sref='cakes' style="cursor: pointer">wedding cakes</header>
 
         <main-wrapper>
 
             <div class="container">
                 <img ng-src="{{oneCake.image_path}}">
+
                 <div class="middle">
+
                     <div class="text" ng-click="addToFavorites(oneCake)">add to favorites</div>
+
                     <div class="icon">
+
                         <i class="fa fa-plus-circle fa-5x" aria-hidden="true" ng-click="addToFavorites(oneCake)"></i>
+                        
                     </div>
                     
                 </div>
