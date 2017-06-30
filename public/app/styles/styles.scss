@@ -401,8 +401,8 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
@@ -443,11 +443,11 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
@@ -464,9 +464,9 @@ a:visited {
     main-wrapper {
         width: 650px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
         div {
             height: 200px;
             width: 200px;
@@ -493,11 +493,11 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
@@ -528,7 +528,6 @@ a:visited {
                 width: 100%;
             }
             img:hover {
-                transform: scale(1.01);
                 opacity: .8;
                 transition: .3s ease-in-out;
             }
@@ -543,11 +542,11 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
@@ -564,9 +563,9 @@ a:visited {
     main-wrapper {
         width: 650px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
         div {
             height: 200px;
             width: 200px;
@@ -593,11 +592,11 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
@@ -615,8 +614,8 @@ a:visited {
         width: 650px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-between;
+            justify-content: space-around;
+            align-content: space-between;
         div {
             height: 200px;
             width: 200px;
@@ -643,17 +642,17 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+            align-items: center;
+            justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         margin-bottom: 35px;
@@ -663,8 +662,8 @@ a:visited {
     main-wrapper {
         width: 650px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+            justify-content: center;
+            align-items: center;
         .container {
             height: 500px;
             width: 500px;
@@ -689,9 +688,9 @@ a:visited {
                 transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 .text {
                     background-color: gray;
                     color: white;
@@ -705,8 +704,8 @@ a:visited {
                     height: 68px;
                     width: 68px;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                        justify-content: center;
+                        align-items: center;
                     color: gray;
                     border-radius: 50%;
                     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
@@ -736,15 +735,15 @@ a:visited {
     font-family: 'Quicksand', sans-serif;
     color: #988676;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     header {
         min-height: 51px;
         max-height: 51px;
         width: 407px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+            align-items: center;
+            justify-content: center;
         border-top: 3px solid #988676;
         border-bottom: 3px solid #988676;
         font-family: 'Quicksand', sans-serif;
@@ -755,6 +754,6 @@ a:visited {
         min-height: 200px;
         width: 100%;
         display: flex;
-        justify-content: center;
+            justify-content: center;
     }
 }

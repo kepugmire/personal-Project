@@ -671,8 +671,6 @@ a:visited {
         height: 100%;
         width: 100%; }
       .cakes main-wrapper div img:hover {
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
         opacity: .8;
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out; }
