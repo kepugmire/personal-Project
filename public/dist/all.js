@@ -114,10 +114,12 @@ angular.module('cakeApp').controller('mainCtrl', function ($scope, mainSvc) {
     $scope.recTemp = function (event) {
         mainSvc.getTemp(event).then(function (response) {
             var resp = response.data.trip;
-            alert("POSSIBLE WEATHER CONDITIONS FOR YOUR CONSIDERATION:" + "\n\n" + resp.cloud_cover.cond + "\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
+            alert("POSSIBLE WEATHER CONDITIONS:" + "\n\n" + "AVG HIGH: " + resp.temp_high.avg.F + "°" + "\n" + "AVG LOW: " + resp.temp_low.avg.F + "°");
             // console.log(resp)
         });
     };
+    // resp.cloud_cover.cond + "\n" +
+
 
     $scope.getUser = function () {
         mainSvc.getUser().then(function (user) {

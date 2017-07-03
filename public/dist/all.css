@@ -63,9 +63,7 @@ header {
     height: 200px;
     cursor: pointer !important; }
   header img:hover {
-    -webkit-transform: scale(1.005);
-    transform: scale(1.005);
-    opacity: .9; }
+    opacity: 1; }
   header div {
     height: 45px;
     width: 550px;
@@ -153,8 +151,8 @@ footer {
 .login {
   height: 40px;
   width: 120px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 80px;
+  margin-top: 80px;
   background-color: white;
   color: #988676;
   font-weight: bolder;
@@ -212,13 +210,15 @@ a:visited {
     justify-content: center;
     background: url("../../app/assets/img/paraHome.jpg");
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-transition: .2s ease;
+    transition: .2s ease; }
     .home div h3 {
       text-shadow: 0px 0px 20px black; }
   .home div:hover {
     opacity: .8;
-    -webkit-transition: .5s ease;
-    transition: .5s ease; }
+    -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1); }
 
 .portfolio {
   height: 100%;
@@ -296,8 +296,10 @@ a:visited {
       background-size: cover; }
     .portfolio .port-view div:hover {
       opacity: .8;
-      -webkit-transition: .5s ease;
-      transition: .5s ease; }
+      -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+      -webkit-transition: .3s ease;
+      transition: .3s ease; }
 
 .contact {
   width: 620px;
@@ -337,6 +339,7 @@ a:visited {
     color: #988676; }
   .contact main-wrapper {
     height: 100%;
+    width: 483px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -600,13 +603,15 @@ a:visited {
       text-align: center; }
       .rentals main-wrapper div img {
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        opacity: 1;
+        -webkit-transition: .5s ease;
+        transition: .5s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px; }
       .rentals main-wrapper div img:hover {
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
-        opacity: .8;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out; }
+        opacity: 0.7; }
 
 .cakes {
   width: 650px;
@@ -717,13 +722,15 @@ a:visited {
       text-align: center; }
       .desserts main-wrapper div img {
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        opacity: 1;
+        -webkit-transition: .5s ease;
+        transition: .5s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px; }
       .desserts main-wrapper div img:hover {
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
-        opacity: .8;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out; }
+        opacity: 0.7; }
 
 .celebration {
   width: 650px;
@@ -783,13 +790,15 @@ a:visited {
       text-align: center; }
       .celebration main-wrapper div img {
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        opacity: 1;
+        -webkit-transition: .5s ease;
+        transition: .5s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px; }
       .celebration main-wrapper div img:hover {
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
-        opacity: .8;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out; }
+        opacity: 0.7; }
 
 .details {
   width: 650px;
@@ -878,15 +887,15 @@ a:visited {
         -ms-flex-align: center;
         align-items: center; }
         .details main-wrapper .container .middle .text {
+          width: 100%;
           background-color: white;
           cursor: pointer;
           color: #988676;
+          border-color: #988676;
           font-weight: bolder;
           font-size: 25px;
           padding: 16px 32px;
-          border-radius: 5px;
-          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
+          border-radius: 10px; }
         .details main-wrapper .container .middle .icon {
           margin-top: 20px;
           height: 66px;
@@ -902,6 +911,7 @@ a:visited {
           -ms-flex-align: center;
           align-items: center;
           color: white;
+          border-color: #988676;
           border-radius: 50%;
           -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
@@ -910,8 +920,8 @@ a:visited {
           -webkit-box-shadow: inset 0 0 0 1px gray;
           box-shadow: inset 0 0 0 1px gray; }
         .details main-wrapper .container .middle .text:hover {
-          -webkit-box-shadow: inset 0 0 0 1px gray;
-          box-shadow: inset 0 0 0 1px gray; }
+          -webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2); }
   .details .container:hover img {
     opacity: 0.7; }
   .details .container:hover .middle {
@@ -1046,17 +1056,17 @@ a:visited {
         align-items: center; }
         .favorites main-wrapper div .middle .text {
           margin-top: 0px;
-          padding-bottom: 4px;
           height: 40px;
           width: 120px;
           background-color: white;
           cursor: pointer;
           font-weight: bolder;
           color: #988676;
-          font-size: 25px;
+          border-color: #988676;
+          font-size: 20px;
           border-radius: 5px;
-          -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
