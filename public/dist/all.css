@@ -209,10 +209,10 @@ a:visited {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: url("../../app/assets/img/parahome.jpg") center no-repeat;
+    background: url("../../app/assets/img/paraHome.jpg") center no-repeat;
     background-attachment: fixed;
     opacity: .95;
-    background-size: 80%;
+    background-size: contain;
     -webkit-transition: .3s ease;
     transition: .3s ease;
     -webkit-box-shadow: 0 0 0px 0px transparent, 0px 0px 25px 3px black inset;
@@ -220,8 +220,8 @@ a:visited {
     .home div h3 {
       text-shadow: 0px 0px 6px black; }
   .home div:hover {
-    -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset;
-    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset; }
+    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset;
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset; }
 
 .portfolio {
   height: 100%;

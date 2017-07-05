@@ -170,7 +170,7 @@ a:visited {
         background: url("../../app/assets/img/paraHome.jpg") center no-repeat;
         background-attachment: fixed;
         opacity: .95;
-        background-size: 80%;
+        background-size: contain;
         transition: .3s ease;
         box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0), 0px 0px 25px 3px rgba(0, 0, 0, 1) inset;
         h3 {
@@ -178,7 +178,7 @@ a:visited {
         }
     }
     div:hover {
-        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px rgba(0, 0, 0, 1) inset;
+        box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px rgba(0, 0, 0, 1) inset;
     }
 }
 
