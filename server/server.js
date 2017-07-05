@@ -3,35 +3,35 @@ const bodyParser = require('body-parser')
 const app = express()
 const session = require('express-session')
 const massive = require('massive')
-const config = require('./config')
+// const config = require('./config')
 const controller = require('./controller')
 const passport = require('passport')
 const Auth0Strategy = require('passport-auth0')
 // console.log(config)
 
-massive(config.database).then(db => {
-    app.set('db', db)
-}).catch(err => {})
 
 var port = 3000;
 
 app.use(bodyParser.json())
-app.use(express.static(`${__dirname}./../public/`))
 app.use(session({
-    secret: config.sessionSecret,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    secret: process.env.sessionSecret
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static(`${__dirname}./../public/`))
 
+massive(process.env.connectionString).then(db => {
+    app.set('db', db)
+}).catch(err => {})
 
 // **********************************
 // **********************************
 passport.use(new Auth0Strategy({
-        domain: config.auth0.domain,
-        clientID: config.auth0.clientID,
-        clientSecret: config.auth0.clientSecret,
+        domain: process.env.domain,
+        clientID: process.env.clientID,
+        clientSecret: process.env.clientSecret,
         callbackURL: '/auth/callback'
     },
     function (accessToken, refreshToken, extraParams, profile, done) {
@@ -100,6 +100,6 @@ app.delete('/deleteFav/:notFav', controller.deleteFav)
 
 
 
-app.listen(port, function () {
-    console.log("Started server on port", port);
+app.listen(process.env.PORT || port, function () {
+    console.log("Started server on port", this.address().port);
 })

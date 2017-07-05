@@ -2,10 +2,10 @@
   "name": "",
   "version": "",
   "description": "",
-  "main": "server/server.js",
+  "main": "./server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",

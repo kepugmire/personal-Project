@@ -60,8 +60,4 @@ angular.module('cakeApp').service('mainSvc', function ($http, $state) {
 
 
 
-
-
-
-
 })
