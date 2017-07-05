@@ -17,14 +17,15 @@ body {
   background-color: white;
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2) inset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0px; }
 
 .main-container {
   height: 100%;
@@ -208,17 +209,19 @@ a:visited {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: url("../../app/assets/img/paraHome.jpg");
+    background: url("../../app/assets/img/paraHome.jpg") center no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    -webkit-transition: .2s ease;
-    transition: .2s ease; }
+    opacity: .95;
+    background-size: 80%;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    -webkit-box-shadow: 0 0 0px 0px transparent, 0px 0px 25px 3px black inset;
+    box-shadow: 0 0 0px 0px transparent, 0px 0px 25px 3px black inset; }
     .home div h3 {
-      text-shadow: 0px 0px 20px black; }
+      text-shadow: 0px 0px 6px black; }
   .home div:hover {
-    opacity: .8;
-    -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3), 0px 0px 25px 3px black inset; }
 
 .portfolio {
   height: 100%;
@@ -281,7 +284,7 @@ a:visited {
       font-size: 30px;
       font-weight: bolder;
       color: gray;
-      text-shadow: 0px 0px 15px white;
+      text-shadow: 0px 0px 7px white;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -291,15 +294,17 @@ a:visited {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      background: url("../../app/assets/img/paracakes.jpg") no-repeat;
+      background: url("../../app/assets/img/paracakes.jpg") center no-repeat;
       background-attachment: fixed;
-      background-size: cover; }
-    .portfolio .port-view div:hover {
-      opacity: .8;
-      -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+      background-position-y: 150px;
+      background-size: 60%;
       -webkit-transition: .3s ease;
-      transition: .3s ease; }
+      transition: .3s ease;
+      -webkit-box-shadow: 0px 0px 0px 0px transparent, 0px 0px 25px 1px rgba(0, 0, 0, 0.4) inset;
+      box-shadow: 0px 0px 0px 0px transparent, 0px 0px 25px 1px rgba(0, 0, 0, 0.4) inset; }
+    .portfolio .port-view div:hover {
+      -webkit-box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.3), 0px 0px 25px 1px rgba(0, 0, 0, 0.4) inset;
+      box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.3), 0px 0px 25px 1px rgba(0, 0, 0, 0.4) inset; }
 
 .contact {
   width: 620px;
