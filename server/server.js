@@ -12,6 +12,21 @@ const Auth0Strategy = require('passport-auth0')
 
 var port = 3000;
 
+// app.use(bodyParser.json())
+// app.use(session({
+//     resave: false,
+//     saveUninitialized: false,
+//     secret: config.sessionSecret
+// }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(express.static(`${__dirname}./../public/`))
+
+// massive(config.connectionString).then(db => {
+//     app.set('db', db)
+// }).catch(err => {})
+
+
 app.use(bodyParser.json())
 app.use(session({
     resave: false,
@@ -28,6 +43,13 @@ massive(process.env.connectionString).then(db => {
 
 // **********************************
 // **********************************
+
+// passport.use(new Auth0Strategy({
+//         domain: config.domain,
+//         clientID: config.clientID,
+//         clientSecret: config.clientSecret,
+//         callbackURL: '/auth/callback'
+//     },
 passport.use(new Auth0Strategy({
         domain: process.env.domain,
         clientID: process.env.clientID,
