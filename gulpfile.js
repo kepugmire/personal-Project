@@ -50,4 +50,4 @@ gulp.task('watch', () => {
 
 // gulp.task('build', ['js-bundle','scss-bundle']);
 
-gulp.task('default', ['watch', 'js-bundle','scss-bundle', 'server']);
+gulp.task('default', ['watch', 'js-bundle', 'scss-bundle', 'server']);

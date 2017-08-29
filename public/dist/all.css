@@ -14,6 +14,7 @@ a:active {
 
 body {
   min-height: 100vh;
+  min-width: 735px;
   background-color: white;
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
@@ -297,7 +298,6 @@ a:visited {
       justify-content: center;
       background: url("../../app/assets/img/paracakes.jpg") center no-repeat;
       background-attachment: fixed;
-      background-position-y: 150px;
       background-size: cover;
       -webkit-transition: .3s ease;
       transition: .3s ease;

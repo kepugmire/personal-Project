@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const session = require('express-session')
 const massive = require('massive')
-// const config = require('./config')
+const config = require('./config')
 const controller = require('./controller')
 const passport = require('passport')
 const Auth0Strategy = require('passport-auth0')
@@ -12,50 +12,50 @@ const Auth0Strategy = require('passport-auth0')
 
 var port = 3000;
 
-// app.use(bodyParser.json())
-// app.use(session({
-//     resave: false,
-//     saveUninitialized: false,
-//     secret: config.sessionSecret
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-// app.use(express.static(`${__dirname}./../public/`))
-
-// massive(config.connectionString).then(db => {
-//     app.set('db', db)
-// }).catch(err => {})
-
-
 app.use(bodyParser.json())
 app.use(session({
     resave: false,
     saveUninitialized: false,
-    secret: process.env.sessionSecret
+    secret: config.sessionSecret
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(`${__dirname}./../public/`))
 
-massive(process.env.connectionString).then(db => {
+massive(config.connectionString).then(db => {
     app.set('db', db)
 }).catch(err => {})
 
+
+// app.use(bodyParser.json())
+// app.use(session({
+//     resave: false,
+//     saveUninitialized: false,
+//     secret: process.env.sessionSecret
+// }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(express.static(`${__dirname}./../public/`))
+
+// massive(process.env.connectionString).then(db => {
+//     app.set('db', db)
+// }).catch(err => {})
+
 // **********************************
 // **********************************
 
-// passport.use(new Auth0Strategy({
-//         domain: config.domain,
-//         clientID: config.clientID,
-//         clientSecret: config.clientSecret,
-//         callbackURL: '/auth/callback'
-//     },
 passport.use(new Auth0Strategy({
-        domain: process.env.domain,
-        clientID: process.env.clientID,
-        clientSecret: process.env.clientSecret,
+        domain: config.domain,
+        clientID: config.clientID,
+        clientSecret: config.clientSecret,
         callbackURL: '/auth/callback'
     },
+// passport.use(new Auth0Strategy({
+//         domain: process.env.domain,
+//         clientID: process.env.clientID,
+//         clientSecret: process.env.clientSecret,
+//         callbackURL: '/auth/callback'
+//     },
     function (accessToken, refreshToken, extraParams, profile, done) {
         // console.log(profile)
         var db = app.get('db')
