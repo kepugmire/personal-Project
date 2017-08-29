@@ -7,11 +7,12 @@ const config = require('./config')
 const controller = require('./controller')
 const passport = require('passport')
 const Auth0Strategy = require('passport-auth0')
-// console.log(config)
 
 
 var port = 3000;
 
+
+//======== UNCOMMENT THE FOLLOWING FOR LOCALHOST EDITTING ========//
 app.use(bodyParser.json())
 app.use(session({
     resave: false,
@@ -26,6 +27,7 @@ massive(config.connectionString).then(db => {
     app.set('db', db)
 }).catch(err => {})
 
+//======== UNCOMMENT THE FOLLOWING FOR HOSTING ========//
 
 // app.use(bodyParser.json())
 // app.use(session({
@@ -41,15 +43,20 @@ massive(config.connectionString).then(db => {
 //     app.set('db', db)
 // }).catch(err => {})
 
+
+
 // **********************************
 // **********************************
 
+//======== UNCOMMENT THE FOLLOWING FOR LOCALHOST ========//
 passport.use(new Auth0Strategy({
         domain: config.domain,
         clientID: config.clientID,
         clientSecret: config.clientSecret,
         callbackURL: '/auth/callback'
     },
+
+//======== UNCOMMENT THE FOLLOWING FOR HOSTING ========//
 // passport.use(new Auth0Strategy({
 //         domain: process.env.domain,
 //         clientID: process.env.clientID,
@@ -111,7 +118,6 @@ app.get('/auth/logout', function (req, res) {
 
 
 // ----- END POINTS ----- //
-
 app.get('/api/cakes', controller.getCakes)
 app.get('/api/cake/:id', controller.getCake)
 app.post('/api/contacts', controller.contactInfo)
@@ -119,9 +125,7 @@ app.post('/postfavorite', controller.postFavorite)
 app.delete('/deleteFav/:notFav', controller.deleteFav)
 
 
-
-
-
+// ----- LISTENING ----- //
 app.listen(process.env.PORT || port, function () {
     console.log("Started server on port", this.address().port);
 })
